@@ -3,9 +3,8 @@
 
 # ==== Commit Messages(Template) ====
     
-# :emoji: #BacklogチケットID 変更内容
-# 例) :bug: SFP_QA-2370 コメント追加
-#       👍 SFP_QA-2371 コメント追加
+# :emoji: IssueID 変更内容
+# 例) :bug: IssueID コメント追加
 # ==== Prefix ====
 # :fix: バグ修正
 # :hotfix: クリティカルなバグ修正
