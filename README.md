@@ -1,13 +1,17 @@
 # 環境構築
-## プロジェクトをローカルにDL
-1. git clonse dddd
 
-## git環境構築
-GUIクライアントを扱っている方は別途調べて行ってください。
-1. git init
-2. git lfs init
+## クローンから作業ブランチまで移動
 
-## Unreal Engineの立ち上げ
+-# GUI の Git クライアントを扱っている方はご自身で調査していただければと思います:bow:
+
+```txt
+cd クローンしたいディレクトリ
+git clonse https://github.com/BreadMotion/FPSActionGame.git
+git checkout develop
+```
+
+## Unreal Engine の立ち上げ
 
 ## その他
-詳細は[こちら]()
+
+詳細は[こちら](https://discord.com/channels/1414831405430603788/1415165263170506782)
