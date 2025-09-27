@@ -1,0 +1,78 @@
+# チェックブランチに変更があったら更新を行う
+name: update check
+on:
+  push:
+    branches:
+      - check
+  # 手動でも実施可能
+  workflow_dispatch:
+
+# 更新があったときのみ実装するジョブを作成
+jobs:
+  # 対象ブランチの更新確認ジョブ
+  check-branch-updated:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      id-token: write
+      contents: read
+    # 処理作成
+    steps: 
+      - uses: actions/checkout@v4
+        with:
+          ref: "check"
+      - name: create cache dir
+        run: mkdir -p cache-SHA
+      - name: check-current-git-hash
+        run: git show --format='%H' --no-patch
+      - name: save-current-git-hash
+        run: git show --format='%H' --no-patch > git-hash.txt
+      - name: save or restore cache cache-SHA
+        id: cache_sha
+        uses: actions/cache@v4
+        with:
+          path: .cache-SHA
+          key: cache-SHA-${{ hashFiles('git-hash.txt') }}
+    outputs:
+      is-updated: ${{steps.cache_sha.outputs.cache-hit != "true" }}
+
+  # ビルドジョブ
+  build-app:
+    needs: [check-branch-updated]
+    if: needs.check-branch-updated.outputs.is-updated == "true"
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    # 処理作成
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: "check"
+      # UE公式ビルド
+      - name: Cook, Stage & Package UE Project
+        uses: OrchidIsle/UE5-Build-Project@latest
+        with:
+          RUNUAT_PATH: 'C:/Unreal Engine/UE5.6_Source/Engine/Build/BatchFiles/RunUAT.bat'
+          UPROJECT_PATH: ${{ github.workspace }}/FPSActionGame.uproject
+          BUILD_CONFIG: Development
+          PLATFORM: Win64
+          CLEAN: true
+          COOK: true
+          STAGE: true
+          PACKAGE: false
+          PAK: false
+          SERVER: false
+          ARCHIVE: false
+          ARCHIVE_PATH: 'C:/Archives/FPSActionGame'
+          NULLRHI: true
+          EDITOR: true
+          ENCRYPT_INI: true
+          RELEASE: '1.0.0'
+          PATCH: '0.9.0'
+          MAPS: 'Map1,Map2'
+          DELETE_PDB: true
+          ANTICHEAT_ENABLED: true
+          ANTICHEAT_PRIVATE_KEY: 'base64encodedprivatekey'
+          ANTICHEAT_PUBLIC_CERT: 'base64encodedpubliccert'
+      # ディスコードへ通知
+      - name: discord notification
+        run: curl -X POST -F content="checkブランチの自動ビルドが終了しました。" https://discord.com/api/webhooks/1420300136600436736/4TjbLHxXo-Srk5tJtlGCtBcrNokfs__T-IWo8NmYlVfNbPpINgEd-dLGk7mg3DLAQAUl
