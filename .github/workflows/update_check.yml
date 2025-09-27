@@ -34,12 +34,12 @@ jobs:
           path: .cache-SHA
           key: cache-SHA-${{ hashFiles('git-hash.txt') }}
     outputs:
-      is-updated: ${{steps.cache_sha.outputs.cache-hit != "true" }}
+      is-updated: ${{steps.cache_sha.outputs.cache-hit != 'true' }}
 
   # ビルドジョブ
   build-app:
     needs: [check-branch-updated]
-    if: needs.check-branch-updated.outputs.is-updated == "true"
+    if: needs.check-branch-updated.outputs.is-updated == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 50
     # 処理作成
