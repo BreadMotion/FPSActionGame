@@ -12,6 +12,9 @@ public class FPSActionGame : ModuleRules
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 
+		string projectName = Target.ProjectFile.GetFileNameWithoutExtension();
+		PublicIncludePaths.Add(projectName);
+
 		// Uncomment if you are using Slate UI
 		// PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });
 		
