@@ -1,12 +1,19 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+// BaseCharacter.cpp
+#include "BaseCharacter.h"
 
-
-#include "Character/BaseCharacter.h"
-
-BaseCharacter::BaseCharacter()
+ABaseCharacter::ABaseCharacter()
 {
+    PrimaryActorTick.bCanEverTick = true;
 }
 
-BaseCharacter::~BaseCharacter()
+void ABaseCharacter::TakeDamage(int _amount)
 {
+    m_health = FMath::Clamp(m_health - _amount, 0.f, m_maxHealth);
+    if (IsDead()) Die();
+}
+
+void ABaseCharacter::Die()
+{
+    UE_LOG(LogTemp, Warning, TEXT("%s has died."), *GetName());
+    Destroy();
 }

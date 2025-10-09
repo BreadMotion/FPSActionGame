@@ -1,15 +1,20 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
-
 #include "CoreMinimal.h"
+#include "Subsystems/GameInstanceSubsystem.h"
+#include "BaseGameManager.generated.h"
 
 /**
  * 
  */
-class FPSACTIONGAME_API BaseGameManager
+UCLASS()
+class FPSACTIONGAME_API UBaseGameManager : public UGameInstanceSubsystem
 {
+    GENERATED_BODY()
+
 public:
-	BaseGameManager();
-	~BaseGameManager();
+    UFUNCTION(BlueprintCallable, Category = "Game")
+    void LoadLevelByName(const FString& _levelName);
+
+    UFUNCTION(BlueprintCallable, Category = "Game")
+    void QuitGame();
 };

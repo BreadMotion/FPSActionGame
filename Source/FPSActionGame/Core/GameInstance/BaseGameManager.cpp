@@ -1,12 +1,17 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+#include "BaseGameManager.h"
+#include "Kismet/GameplayStatics.h"
 
-
-#include "Core/GameInstance/BaseGameManager.h"
-
-BaseGameManager::BaseGameManager()
+void UBaseGameManager::LoadLevelByName(const FString& _levelName)
 {
+    if (UWorld* world = GetWorld())
+        UGameplayStatics::OpenLevel(world, FName(*_levelName));
 }
 
-BaseGameManager::~BaseGameManager()
+void UBaseGameManager::QuitGame()
 {
+    if (UWorld* world = GetWorld())
+    {
+        APlayerController* pc = UGameplayStatics::GetPlayerController(world, 0);
+        UKismetSystemLibrary::QuitGame(world, pc, EQuitPreference::Quit, false);
+    }
 }
