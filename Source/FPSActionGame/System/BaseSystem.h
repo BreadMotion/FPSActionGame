@@ -39,8 +39,10 @@ public:
     UFUNCTION(BlueprintCallable, Category = "System|Save")
     virtual void LoadData();
     
-    /** @brienf デバッグ用ログ出力
-    * @param _message : 出力メッセージ */
+    /** 
+     * @brienf デバッグ用ログ出力
+     * @param _message : 出力メッセージ 
+     */
     UFUNCTION(BlueprintCallable, Category = "System|Debug")
     void PrintDebugMessage(const FString& _message) const;
 };
