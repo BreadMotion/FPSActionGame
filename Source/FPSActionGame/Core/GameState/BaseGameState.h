@@ -25,18 +25,18 @@ public:
 
     /** @brief 現在のスコア（同期されます） */
     UPROPERTY(Replicated, BlueprintReadOnly, Category = "GameState")
-    int32 Score;
+    int32 m_score;
 
     /** @brief 現在のゲームフェーズ（例："Init"、"InGame"、"Result"） */
     UPROPERTY(ReplicatedUsing = OnRep_GamePhase, BlueprintReadOnly, Category = "GameState")
-    FString CurrentPhase;
+    FString m_currentPhase;
 
     /**
      * @brief サーバーでゲームフェーズを変更します。
-     * @param NewPhase 新しいフェーズ名。
+     * @param _newPhase 新しいフェーズ名。
      */
     UFUNCTION(BlueprintCallable, Category = "GameState")
-    void SetGamePhase(const FString& NewPhase);
+    void SetGamePhase(const FString& _newPhase);
 
 protected:
     /** @brief フェーズ変更時に呼ばれるイベント（クライアント側で発火）。 */
@@ -44,5 +44,5 @@ protected:
     void OnRep_GamePhase();
 
     /** @brief 変数のレプリケーション設定。 */
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& _outLifetimeProps) const override;
 };

@@ -1,13 +1,31 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "System/BaseSystem.h"
+#include "Subsystems/GameInstanceSubsystem.h"
+#include "SaveManager.h"
+#include "SaveSystem.generated.h"
 
 /**
- * 
+ * UGameInstanceSubsystemとして動作するセーブ管理サブシステム
+ * - GameInstance起動時に初期化
+ * - SaveManagerを通してローカル/リモートの保存を抽象化
  */
-class FPSACTIONGAME_API USaveSystem : public UBaseSystem
+UCLASS()
+class FPSACTIONGAME_API USaveSystem : public UGameInstanceSubsystem
 {
+    GENERATED_BODY()
+
 public:
-	USaveSystem();
-	~USaveSystem();
+    virtual void Initialize(FSubsystemCollectionBase& _collection) override;
+    virtual void Deinitialize() override;
+
+    // セーブデータ保存
+    UFUNCTION(BlueprintCallable, Category = "Save")
+    void SaveAll();
+
+    // セーブデータ読み込み
+    UFUNCTION(BlueprintCallable, Category = "Save")
+    void LoadAll();
+
+private:
+    TUniquePtr<FSaveManager> m_saveManager;
 };

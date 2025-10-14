@@ -34,29 +34,29 @@ void UBaseSystem::Deinitialize()
 
 /**
  * @brief レベル遷移イベント。
- * @param OldLevelName 遷移前のレベル名。
- * @param NewLevelName 遷移後のレベル名。
+ * @param _oldLevelName 遷移前のレベル名。
+ * @param _newLevelName 遷移後のレベル名。
  * @details
  * - レベルが変更された際に `UBaseGameManager` から呼び出されます。
  * - 派生クラスでオーバーライドして、レベルごとの初期化・終了処理を実装できます。
  *
  * @virtual
  */
-void UBaseSystem::OnLevelChanged(const FString& OldLevelName, const FString& NewLevelName)
+void UBaseSystem::OnLevelChanged(const FString& _oldLevelName, const FString& _newLevelName)
 {
     // 派生クラスで実装
 }
 
 /**
  * @brief ゲームの再生状態通知イベント。
- * @param StateName 状態名（例："Pause"、"Resume"、"GameOver"など）。
+ * @param _stateName 状態名（例："Pause"、"Resume"、"GameOver"など）。
  * @details
  * - ゲーム状態が変更された際に `UBaseGameManager` から呼び出されます。
  * - 状態に応じた挙動変更（例：一時停止、リソース調整など）を派生クラスで実装します。
  *
  * @virtual
  */
-void UBaseSystem::OnGameStateChanged(const FString& StateName)
+void UBaseSystem::OnGameStateChanged(const FString& _stateName)
 {
     // デフォルト空実装
 }

@@ -8,19 +8,19 @@
  */
 ABaseGameState::ABaseGameState()
 {
-    Score = 0;
-    CurrentPhase = TEXT("Init");
+    m_score = 0;
+    m_currentPhase = TEXT("Init");
 }
 
 /**
  * @brief ゲームフェーズを変更します（サーバーのみ実行）。
- * @param NewPhase 新しいフェーズ名。
+ * @param _newPhase 新しいフェーズ名。
  */
-void ABaseGameState::SetGamePhase(const FString& NewPhase)
+void ABaseGameState::SetGamePhase(const FString& _newPhase)
 {
     if (HasAuthority())
     {
-        CurrentPhase = NewPhase;
+        m_currentPhase = _newPhase;
         OnRep_GamePhase();
     }
 }
@@ -32,7 +32,7 @@ void ABaseGameState::SetGamePhase(const FString& NewPhase)
  */
 void ABaseGameState::OnRep_GamePhase()
 {
-    UE_LOG(LogTemp, Log, TEXT("Game phase changed to: %s"), *CurrentPhase);
+    UE_LOG(LogTemp, Log, TEXT("Game phase changed to: %s"), *m_currentPhase);
 }
 
 /**
@@ -43,6 +43,6 @@ void ABaseGameState::OnRep_GamePhase()
 void ABaseGameState::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
 {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    DOREPLIFETIME(ABaseGameState, Score);
-    DOREPLIFETIME(ABaseGameState, CurrentPhase);
+    DOREPLIFETIME(ABaseGameState, m_score);
+    DOREPLIFETIME(ABaseGameState, m_currentPhase);
 }

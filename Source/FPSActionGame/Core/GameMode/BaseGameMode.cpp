@@ -24,7 +24,7 @@ void ABaseGameMode::StartPlay()
 {
     Super::StartPlay();
 
-    CachedGameState = GetGameState<ABaseGameState>();
+    m_cachedGameState = GetGameState<ABaseGameState>();
 
     if (UBaseGameManager* GameManager = Cast<UBaseGameManager>(GetGameInstance()))
     {
@@ -38,18 +38,18 @@ void ABaseGameMode::StartPlay()
  * @brief プレイヤー参加時の処理。
  * @param NewPlayer 参加したプレイヤーのコントローラ。
  */
-void ABaseGameMode::PostLogin(APlayerController* NewPlayer)
+void ABaseGameMode::PostLogin(APlayerController* _newPlayer)
 {
-    Super::PostLogin(NewPlayer);
-    UE_LOG(LogTemp, Log, TEXT("Player joined: %s"), *NewPlayer->GetName());
+    Super::PostLogin(_newPlayer);
+    UE_LOG(LogTemp, Log, TEXT("Player joined: %s"), *_newPlayer->GetName());
 }
 
 /**
  * @brief プレイヤー退出時の処理。
  * @param Exiting 退出するプレイヤーのコントローラ。
  */
-void ABaseGameMode::Logout(AController* Exiting)
+void ABaseGameMode::Logout(AController* _exiting)
 {
-    Super::Logout(Exiting);
-    UE_LOG(LogTemp, Log, TEXT("Player left: %s"), *Exiting->GetName());
+    Super::Logout(_exiting);
+    UE_LOG(LogTemp, Log, TEXT("Player left: %s"), *_exiting->GetName());
 }

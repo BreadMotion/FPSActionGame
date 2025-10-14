@@ -35,23 +35,23 @@ public:
 
     /**
      * @brief プレイヤー参加時イベント。
-     * @param NewPlayer 参加したプレイヤーのコントローラ。
+     * @param _newPlayer 参加したプレイヤーのコントローラ。
      * @details
      * - 新規プレイヤーがログインしたタイミングで呼ばれます。
      * - 必要に応じてプレイヤー固有の初期化処理を行います。
      */
-    virtual void PostLogin(APlayerController* NewPlayer) override;
+    virtual void PostLogin(APlayerController* _newPlayer) override;
 
     /**
      * @brief プレイヤー退出時イベント。
-     * @param Exiting 退出するプレイヤーのコントローラ。
+     * @param _exiting 退出するプレイヤーのコントローラ。
      * @details
      * - プレイヤーがゲームから離脱した際に呼ばれます。
      */
-    virtual void Logout(AController* Exiting) override;
+    virtual void Logout(AController* _exiting) override;
 
 protected:
     /** @brief 現在のゲームステート（キャッシュ）。 */
     UPROPERTY()
-    class ABaseGameState* CachedGameState;
+    class ABaseGameState* m_cachedGameState;
 };

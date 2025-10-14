@@ -44,8 +44,8 @@ public:
 
     /**
      * @brief レベル遷移イベントを全サブシステムに通知します。
-     * @param OldLevel 遷移前のレベル名。
-     * @param NewLevel 遷移後のレベル名。
+     * @param _oldLevel 遷移前のレベル名。
+     * @param _newLevel 遷移後のレベル名。
      *
      * @details
      * - 登録済みの全 `UBaseSystem` 継承クラスに対して
@@ -56,11 +56,11 @@ public:
      * @see BroadcastGameStateChanged()
      * @see UBaseSystem::OnLevelChanged()
      */
-    void BroadcastLevelChanged(const FString& OldLevel, const FString& NewLevel);
+    void BroadcastLevelChanged(const FString& _oldLevel, const FString& _newLevel);
 
     /**
      * @brief ゲーム状態の変化を全サブシステムに通知します。
-     * @param StateName 状態名（例："Pause"、"Resume"、"GameOver"など）。
+     * @param _stateName 状態名（例："Pause"、"Resume"、"GameOver"など）。
      *
      * @details
      * - 全 `UBaseSystem` 継承クラスに対して `OnGameStateChanged()` を呼び出します。
@@ -70,7 +70,7 @@ public:
      * @see BroadcastLevelChanged()
      * @see UBaseSystem::OnGameStateChanged()
      */
-    void BroadcastGameStateChanged(const FString& StateName);
+    void BroadcastGameStateChanged(const FString& _stateName);
 
 private:
     /**
