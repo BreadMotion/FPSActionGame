@@ -48,7 +48,8 @@ void UBaseGameManager::OnStart()
  */
 void UBaseGameManager::BroadcastLevelChanged(const FString& _oldLevelName, const FString& _newLevelName)
 {
-    TArray<UGameInstanceSubsystem*> Subsystems = GetSubsystemArray<UGameInstanceSubsystem>();
+    // ForEachSubsystem<UGameInstanceSubsystem>([](UGameInstanceSubsystem* Subsystem) {});
+    TArray<UGameInstanceSubsystem*> Subsystems = GetSubsystemArrayCopy<UGameInstanceSubsystem>();
     for (UGameInstanceSubsystem* Subsystem : Subsystems)
     {
         if (UBaseSystem* System = Cast<UBaseSystem>(Subsystem))
@@ -70,7 +71,8 @@ void UBaseGameManager::BroadcastLevelChanged(const FString& _oldLevelName, const
  */
 void UBaseGameManager::BroadcastGameStateChanged(const FString& _stateName)
 {
-    TArray<UGameInstanceSubsystem*> Subsystems = GetSubsystemArray<UGameInstanceSubsystem>();
+    // ForEachSubsystem<UGameInstanceSubsystem>([](UGameInstanceSubsystem* Subsystem) {});
+    TArray<UGameInstanceSubsystem*> Subsystems = GetSubsystemArrayCopy<UGameInstanceSubsystem>();
     for (UGameInstanceSubsystem* Subsystem : Subsystems)
     {
         if (UBaseSystem* System = Cast<UBaseSystem>(Subsystem))

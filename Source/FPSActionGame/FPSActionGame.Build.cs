@@ -18,6 +18,24 @@ public class FPSActionGame : ModuleRules
             }
         );
 
+        PublicIncludePaths.AddRange(
+            new string[] 
+            {
+                "FPSActionGame", // ÉÇÉWÉÖÅ[Éãíºâ∫Çñæé¶
+                "FPSActionGame/Ability",
+                "FPSActionGame/Character",
+                "FPSActionGame/Core",
+                "FPSActionGame/Data",
+                "FPSActionGame/Interface",
+                "FPSActionGame/Item",
+                "FPSActionGame/System",
+                "FPSActionGame/UI",
+                "FPSActionGame/Utility",
+                "FPSActionGame/Weapon",
+                "FPSActionGame/World"
+            }
+        );
+
         PrivateDependencyModuleNames.AddRange(new string[] { });
 
         // Uncomment if you are using Slate UI

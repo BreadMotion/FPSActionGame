@@ -1,6 +1,6 @@
 #include "GameMode/BaseGameMode.h"
 #include "GameState/BaseGameState.h"
-#include "Core/BaseGameManager.h"
+#include "GameInstance/BaseGameManager.h"
 #include "Kismet/GameplayStatics.h"
 #include "Engine/World.h"
 

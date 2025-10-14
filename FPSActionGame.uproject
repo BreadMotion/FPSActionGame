@@ -14,7 +14,7 @@
     {
       "Name": "ModelingToolsEditorMode",
       "Enabled": true
-    },
+    }
   ],
   "TargetPlatforms": [],
   "AdditionalRootDirectories": [],
