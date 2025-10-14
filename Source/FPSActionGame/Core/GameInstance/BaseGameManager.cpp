@@ -2,65 +2,80 @@
 #include "Kismet/GameplayStatics.h"
 #include "Kismet/KismetSystemLibrary.h"
 #include "Engine/World.h"
+#include "System/ProgressionSystem/ProgressionSystem.h"
 
 /**
- * @brief サブシステム初期化処理
+ * @brief ゲーム全体の初期化処理を行います。
  * @details
- *  - ゲーム開始時刻を記録し、ログ出力を行います
+ * - ゲームインスタンスが生成されたタイミングで呼び出されます。
+ * - サブシステム群の初期化はこの段階で Unreal によって自動的に行われます。
+ * - 本関数では初期レベル名などの基本的なゲーム情報をセットアップします。
+ *
+ * @note `UGameInstance::Init()` のオーバーライドです。
+ * @see OnStart()
  */
-void UBaseGameManager::Initialize(FSubsystemCollectionBase& _collection)
+void UBaseGameManager::Init()
 {
-    Super::Initialize(_collection);
-    m_gameStartTime = FDateTime::UtcNow();
-    UE_LOG(LogTemp, Log, TEXT("BaseGameManager initialized at %s"), *m_gameStartTime.ToString());
+    Super::Init();
+    m_currentLevel = TEXT("None");
 }
 
 /**
- * @brief サブシステム終了処理
+ * @brief ゲーム開始時の処理を行います。
  * @details
- *  - 終了ログを出力します。必要に応じてセーブ処理などを追加可能です
+ * - 実行開始時に呼び出され、現在のレベル名を記録します。
+ * - レベル遷移前後で状態を管理したい場合に利用できます。
+ *
+ * @note `UGameInstance::OnStart()` のオーバーライドです。
+ * @see BroadcastLevelChanged()
  */
-void UBaseGameManager::Deinitialize()
+void UBaseGameManager::OnStart()
 {
-    UE_LOG(LogTemp, Log, TEXT("BaseGameManager deinitialized."));
-    Super::Deinitialize();
+    Super::OnStart();
+    m_currentLevel = UGameplayStatics::GetCurrentLevelName(this, true);
 }
 
 /**
- * @brief 指定されたレベルをロードします
- * @param LevelName ロードするレベル名
+ * @brief レベル遷移イベントを全てのサブシステムに通知します。
+ * @param _oldLevelName 遷移前のレベル名。
+ * @param _newLevelName 遷移後のレベル名。
+ * @details
+ * - `UBaseSystem` を継承した全てのサブシステムに対して `OnLevelChanged()` を呼び出します。
+ * - 各サブシステムでレベル変更時の処理（例：データリロードやリセット）を実装できます。
+ *
+ * @see UBaseSystem::OnLevelChanged()
+ * @see BroadcastGameStateChanged()
  */
-void UBaseGameManager::LoadLevel(const FString& _levelName)
+void UBaseGameManager::BroadcastLevelChanged(const FString& _oldLevelName, const FString& _newLevelName)
 {
-    if (UWorld* world = GetWorld())
+    TArray<UGameInstanceSubsystem*> Subsystems = GetSubsystemArray<UGameInstanceSubsystem>();
+    for (UGameInstanceSubsystem* Subsystem : Subsystems)
     {
-        UE_LOG(LogTemp, Log, TEXT("Loading level: %s"), *_levelName);
-        UGameplayStatics::OpenLevel(world, FName(*_levelName));
-    }
-    else
-    {
-        UE_LOG(LogTemp, Warning, TEXT("BaseGameManager: Cannot load level, World is null."));
-    }
-}
-
-/**
- * @brief ゲームを終了します
- * @param _bForceQuit 強制終了を行うかどうか
- */
-void UBaseGameManager::QuitGame(bool _bForceQuit)
-{
-    if (UWorld* world = GetWorld())
-    {
-        APlayerController* PC = UGameplayStatics::GetPlayerController(world, 0);
-        UKismetSystemLibrary::QuitGame(world, PC, EQuitPreference::Quit, _bForceQuit);
+        if (UBaseSystem* System = Cast<UBaseSystem>(Subsystem))
+        {
+            System->OnLevelChanged(_oldLevelName, _newLevelName);
+        }
     }
 }
 
 /**
- * @brief 現在のプレイ時間（秒）を取得します
- * @return 経過時間（秒）
+ * @brief ゲーム全体の状態変更を全てのサブシステムに通知します。
+ * @param _stateName 変更後の状態名（例："Pause", "Resume", "GameOver" など）。
+ * @details
+ * - 各 `UBaseSystem` に対して `OnGameStateChanged()` を呼び出します。
+ * - 各システムが独自の内部状態を更新したり、一時停止・再開処理を実装できます。
+ *
+ * @see UBaseSystem::OnGameStateChanged()
+ * @see BroadcastLevelChanged()
  */
-float UBaseGameManager::GetElapsedPlayTime() const
+void UBaseGameManager::BroadcastGameStateChanged(const FString& _stateName)
 {
-    return (FDateTime::UtcNow() - m_gameStartTime).GetTotalSeconds();
+    TArray<UGameInstanceSubsystem*> Subsystems = GetSubsystemArray<UGameInstanceSubsystem>();
+    for (UGameInstanceSubsystem* Subsystem : Subsystems)
+    {
+        if (UBaseSystem* System = Cast<UBaseSystem>(Subsystem))
+        {
+            System->OnGameStateChanged(_stateName);
+        }
+    }
 }

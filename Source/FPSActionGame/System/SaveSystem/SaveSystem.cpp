@@ -1,9 +1,9 @@
 #include "System/SaveSystem/SaveSystem.h"
 
-SaveSystem::SaveSystem()
+USaveSystem::USaveSystem()
 {
 }
 
-SaveSystem::~SaveSystem()
+USaveSystem::~USaveSystem()
 {
 }

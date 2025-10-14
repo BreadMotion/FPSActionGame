@@ -1,12 +1,13 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "System/BaseSystem.h"
 
 /**
  * 
  */
-class FPSACTIONGAME_API SaveSystem
+class FPSACTIONGAME_API USaveSystem : public UBaseSystem
 {
 public:
-	SaveSystem();
-	~SaveSystem();
+	USaveSystem();
+	~USaveSystem();
 };
