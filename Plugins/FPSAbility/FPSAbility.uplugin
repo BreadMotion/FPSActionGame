@@ -1,0 +1,15 @@
+{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "1.0",
+  "FriendlyName": "FPS Ability Plugin",
+  "Description": "FPSActionGame Project's Ability Plugin.",
+  "Category": "Gameplay",
+  "Modules": [
+    {
+      "Name": "FPSAbility",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    }
+  ]
+}

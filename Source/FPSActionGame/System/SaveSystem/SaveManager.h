@@ -1,29 +1,29 @@
-#pragma once
+ï»¿#pragma once
 #include "CoreMinimal.h"
 #include "SaveDataStructures.h"
 #include "LocalSaveHandler.h"
 #include "RemoteSaveHandler.h"
 
 /**
- * ƒZ[ƒuˆ—‚Ìƒtƒ@ƒT[ƒh
- * - ƒ[ƒJƒ‹/ƒŠƒ‚[ƒg—¼‘Î‰iİ’è‚ÅØ‚è‘Ö‚¦‰Âj
- * - Subsystem‚©‚ç’¼ÚŒÄ‚Î‚ê‚é
+ * ã‚»ãƒ¼ãƒ–å‡¦ç†ã®ãƒ•ã‚¡ã‚µãƒ¼ãƒ‰
+ * - ãƒ­ãƒ¼ã‚«ãƒ«/ãƒªãƒ¢ãƒ¼ãƒˆä¸¡å¯¾å¿œï¼ˆè¨­å®šã§åˆ‡ã‚Šæ›¿ãˆå¯ï¼‰
+ * - Subsystemã‹ã‚‰ç›´æ¥å‘¼ã°ã‚Œã‚‹
  */
 class FSaveManager
 {
 public:
-    FSaveManager() = default;
-    ~FSaveManager() = default;
+	FSaveManager() = default;
+	~FSaveManager() = default;
 
-    void Initialize();
-    void Shutdown();
+	void Initialize();
+	void Shutdown();
 
-    void SaveAll();
-    void LoadAll();
+	void SaveAll();
+	void LoadAll();
 
 private:
-    TUniquePtr<FLocalSaveHandler> m_localHandler;
-    TUniquePtr<FRemoteSaveHandler> m_remoteHandler;
+	TUniquePtr<FLocalSaveHandler> m_localHandler;
+	TUniquePtr<FRemoteSaveHandler> m_remoteHandler;
 
-    bool m_bUseRemote = false; // «—ˆ“I‚ÉƒNƒ‰ƒEƒh˜AŒg‚ğ“±“ü‚·‚é‚½‚ß‚Ìƒtƒ‰ƒO
+	bool m_bUseRemote = false; // å°†æ¥çš„ã«ã‚¯ãƒ©ã‚¦ãƒ‰é€£æºã‚’å°å…¥ã™ã‚‹ãŸã‚ã®ãƒ•ãƒ©ã‚°
 };

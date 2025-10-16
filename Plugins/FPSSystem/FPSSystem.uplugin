@@ -1,0 +1,15 @@
+{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "1.0",
+  "FriendlyName": "FPS System Plugin",
+  "Description": "FPSActionGame Project's System Plugin.",
+  "Category": "Gameplay",
+  "Modules": [
+    {
+      "Name": "FPSSystem",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    }
+  ]
+}

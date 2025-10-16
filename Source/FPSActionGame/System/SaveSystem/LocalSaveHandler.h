@@ -1,10 +1,10 @@
-#pragma once
+ï»¿#pragma once
 #include "CoreMinimal.h"
 #include "SaveDataStructures.h"
 
 /**
- * ƒ[ƒJƒ‹ƒZ[ƒuƒf[ƒ^‚ğˆµ‚¤ƒnƒ“ƒhƒ‰[
- * - SaveGameObject‚ğg—p‚µ‚Ä•Û‘¶
+ * ãƒ­ãƒ¼ã‚«ãƒ«ã‚»ãƒ¼ãƒ–ãƒ‡ãƒ¼ã‚¿ã‚’æ‰±ã†ãƒãƒ³ãƒ‰ãƒ©ãƒ¼
+ * - SaveGameObjectã‚’ä½¿ç”¨ã—ã¦ä¿å­˜
  */
 class FLocalSaveHandler
 {

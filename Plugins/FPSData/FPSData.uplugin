@@ -1,0 +1,15 @@
+{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "1.0",
+  "FriendlyName": "FPS Data Plugin",
+  "Description": "FPSActionGame Project's Data Plugin.",
+  "Category": "Gameplay",
+  "Modules": [
+    {
+      "Name": "FPSData",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    }
+  ]
+}

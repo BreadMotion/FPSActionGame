@@ -1,10 +1,10 @@
-#pragma once
+ï»¿#pragma once
 #include "CoreMinimal.h"
 #include "GameFramework/SaveGame.h"
 #include "SaveDataStructures.generated.h"
 
 /**
- * ƒVƒŠƒAƒ‰ƒCƒY‘ÎÛƒf[ƒ^\‘¢
+ * ã‚·ãƒªã‚¢ãƒ©ã‚¤ã‚ºå¯¾è±¡ãƒ‡ãƒ¼ã‚¿æ§‹é€ 
  */
 UCLASS()
 class FPSACTIONGAME_API USaveGameData : public USaveGame

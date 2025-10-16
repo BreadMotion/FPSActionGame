@@ -4,8 +4,8 @@ using UnrealBuildTool;
 
 public class FPSActionGame : ModuleRules
 {
-	public FPSActionGame(ReadOnlyTargetRules Target) : base(Target)
-	{
+    public FPSActionGame(ReadOnlyTargetRules Target) : base(Target)
+    {
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
         PublicDependencyModuleNames.AddRange(
@@ -14,32 +14,32 @@ public class FPSActionGame : ModuleRules
                 "Core",
                 "CoreUObject",
                 "Engine",
-                "InputCore"
+                "InputCore",
+                "FPSAbility",
+                "FPSCharacter",
+                "FPSCore",
+                "FPSData",
+                "FPSInterface",
+                "FPSItem",
+                "FPSSystem",
+                "FPSUI",
+                "FPSUtility",
+                "FPSWeapon",
+                "FPSWorld",
             }
         );
 
         PublicIncludePaths.AddRange(
-            new string[] 
+            new string[]
             {
-                "FPSActionGame", // ÉÇÉWÉÖÅ[Éãíºâ∫Çñæé¶
-                "FPSActionGame/Ability",
-                "FPSActionGame/Character",
-                "FPSActionGame/Core",
-                "FPSActionGame/Data",
-                "FPSActionGame/Interface",
-                "FPSActionGame/Item",
-                "FPSActionGame/System",
-                "FPSActionGame/UI",
-                "FPSActionGame/Utility",
-                "FPSActionGame/Weapon",
-                "FPSActionGame/World"
+                "FPSActionGame",
             }
         );
 
         PrivateDependencyModuleNames.AddRange(new string[] { });
 
         // Uncomment if you are using Slate UI
-        // PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });
+        PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });
 
         // Uncomment if you are using online features
         // PrivateDependencyModuleNames.Add("OnlineSubsystem");

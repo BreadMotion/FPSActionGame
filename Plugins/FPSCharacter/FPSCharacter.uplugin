@@ -1,0 +1,15 @@
+{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "1.0",
+  "FriendlyName": "FPS Character Plugin",
+  "Description": "FPSActionGame Project's Character Plugin.",
+  "Category": "Gameplay",
+  "Modules": [
+    {
+      "Name": "FPSCharacter",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    }
+  ]
+}

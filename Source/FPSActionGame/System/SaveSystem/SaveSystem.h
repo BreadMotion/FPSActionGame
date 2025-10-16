@@ -1,13 +1,13 @@
-#pragma once
+ï»¿#pragma once
 #include "CoreMinimal.h"
 #include "Subsystems/GameInstanceSubsystem.h"
 #include "SaveManager.h"
 #include "SaveSystem.generated.h"
 
 /**
- * UGameInstanceSubsystem‚Æ‚µ‚Ä“®ì‚·‚éƒZ[ƒuŠÇ—ƒTƒuƒVƒXƒeƒ€
- * - GameInstance‹N“®‚É‰Šú‰»
- * - SaveManager‚ğ’Ê‚µ‚Äƒ[ƒJƒ‹/ƒŠƒ‚[ƒg‚Ì•Û‘¶‚ğ’ŠÛ‰»
+ * UGameInstanceSubsystemã¨ã—ã¦å‹•ä½œã™ã‚‹ã‚»ãƒ¼ãƒ–ç®¡ç†ã‚µãƒ–ã‚·ã‚¹ãƒ†ãƒ 
+ * - GameInstanceèµ·å‹•æ™‚ã«åˆæœŸåŒ–
+ * - SaveManagerã‚’é€šã—ã¦ãƒ­ãƒ¼ã‚«ãƒ«/ãƒªãƒ¢ãƒ¼ãƒˆã®ä¿å­˜ã‚’æŠ½è±¡åŒ–
  */
 UCLASS()
 class FPSACTIONGAME_API USaveSystem : public UGameInstanceSubsystem
@@ -18,11 +18,11 @@ public:
     virtual void Initialize(FSubsystemCollectionBase& _collection) override;
     virtual void Deinitialize() override;
 
-    // ƒZ[ƒuƒf[ƒ^•Û‘¶
+    // ã‚»ãƒ¼ãƒ–ãƒ‡ãƒ¼ã‚¿ä¿å­˜
     UFUNCTION(BlueprintCallable, Category = "Save")
     void SaveAll();
 
-    // ƒZ[ƒuƒf[ƒ^“Ç‚İ‚İ
+    // ã‚»ãƒ¼ãƒ–ãƒ‡ãƒ¼ã‚¿èª­ã¿è¾¼ã¿
     UFUNCTION(BlueprintCallable, Category = "Save")
     void LoadAll();
 

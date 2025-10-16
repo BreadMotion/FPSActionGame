@@ -5,7 +5,7 @@ void FSaveManager::Initialize()
     m_localHandler = MakeUnique<FLocalSaveHandler>();
     m_remoteHandler = MakeUnique<FRemoteSaveHandler>();
 
-    // ¡‚Íƒ[ƒJƒ‹‚Ì‚İ—˜—p
+    // ä»Šã¯ãƒ­ãƒ¼ã‚«ãƒ«ã®ã¿åˆ©ç”¨
     m_bUseRemote = false;
 }
 

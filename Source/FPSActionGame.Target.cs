@@ -11,5 +11,5 @@ public class FPSActionGameTarget : TargetRules
 		DefaultBuildSettings = BuildSettingsVersion.V5;
 
 		ExtraModuleNames.AddRange( new string[] { "FPSActionGame" } );
-	}
+    }
 }
