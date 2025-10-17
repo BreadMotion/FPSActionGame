@@ -1,9 +1,14 @@
 #include "DataSystem.h"
+#include "Engine/Engine.h"
 
-UDataSystem::UDataSystem()
+void UDataSystem::Initialize(FSubsystemCollectionBase& Collection)
 {
+    Super::Initialize(Collection);
+
 }
 
-UDataSystem::~UDataSystem()
+void UDataSystem::Deinitialize()
 {
+
+    Super::Deinitialize();
 }

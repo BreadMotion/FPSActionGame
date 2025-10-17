@@ -1,0 +1,1 @@
+tree /f /a | findstr /ri /c:"^[^| ]" /c:"^[| ]*[+\\]" /c:"\.cs" /c:"\.cpp" /c:"\.h$"

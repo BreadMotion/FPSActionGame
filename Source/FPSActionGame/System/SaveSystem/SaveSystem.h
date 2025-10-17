@@ -5,7 +5,9 @@
 #include "SaveSystem.generated.h"
 
 /**
- * UGameInstanceSubsystemとして動作するセーブ管理サブシステム
+ * @class USaveSystem
+ * @brief セーブ管理を行うサブシステムクラス
+ * @details UGameInstanceSubsystemとして動作するセーブ管理サブシステム
  * - GameInstance起動時に初期化
  * - SaveManagerを通してローカル/リモートの保存を抽象化
  */
