@@ -1,55 +1,83 @@
 #include "BaseGameMode.h"
 #include "BaseGameState.h"
 #include "BaseGameManager.h"
-#include "Kismet/GameplayStatics.h"
 #include "Engine/World.h"
+#include "GameFramework/PlayerController.h"
+#include "Kismet/GameplayStatics.h"
 
 /**
- * @brief �Q�[�����[�h�̃R���X�g���N�^
+ * @brief デフォルトコンストラクタ
  * @details
- * - `GameStateClass` �� `ABaseGameState` ��ݒ肷��
+ * - デフォルトで使用する GameState クラスを設定します。
  */
 ABaseGameMode::ABaseGameMode()
 {
+	// BaseGameState を使用（継承先で差し替え可能）
 	GameStateClass = ABaseGameState::StaticClass();
+	UE_LOG(LogTemp, Log, TEXT("[BaseGameMode] Constructed (%s)"), *GetName());
 }
 
 /**
- * @brief �Q�[���J�n���̏���
+ * @brief ゲーム開始時の処理
  * @details
- * - `ABaseGameState` �̃L���b�V����ێ����A�Q�[���}�l�[�W���[�ɒʒm����
- * - `UBaseGameManager` �ɃQ�[���J�n�̃u���[�h�L���X�g�𑗂�
+ * - 親クラスの StartPlay() を呼び出した後に、BaseGameManager の初期化を行います。
+ * - 現在の GameState をキャッシュします。
  */
 void ABaseGameMode::StartPlay()
 {
 	Super::StartPlay();
 
-	m_cachedGameState = GetGameState<ABaseGameState>();
+	m_cachedGameState = Cast<ABaseGameState>(GameState);
+	if (m_cachedGameState)
+		UE_LOG(LogTemp, Log, TEXT("[BaseGameMode] Cached GameState: %s"), *m_cachedGameState->GetName());
 
-	if (UBaseGameManager* GameManager = Cast<UBaseGameManager>(GetGameInstance()))
+	UWorld* world = GetWorld();
+	UGameInstance* gi = world->GetGameInstance();
+	if (world && gi)
 	{
-		GameManager->BroadcastGameStateChanged(TEXT("StartPlay"));
-	}
+		UBaseGameManager* gm = NewObject<UBaseGameManager>(gi);
+		if (gm)
+		{
+			//gm->RegisterSystems(gi);
+			//gm->InitializeAll();
 
-	UE_LOG(LogTemp, Log, TEXT("GameMode: StartPlay called."));
+			UE_LOG(LogTemp, Log, TEXT("[BaseGameMode] BaseGameManager initialized."));
+		}
+		else
+			UE_LOG(LogTemp, Warning, TEXT("[BaseGameMode] Failed to create UBaseGameManager instance."));
+	}
 }
 
 /**
- * @brief �v���C���[�����O�C���������̏���
- * @param NewPlayer ���O�C�������v���C���[�R���g���[���[
+ * @brief プレイヤーがログインした際の処理
+ * @param _newPlayer 新しくログインしたプレイヤーのコントローラー
+ * @details
+ * - 通常はプレイヤーの初期化処理や UI 呼び出しなどを行います。
+ * - 現状はログを出力するのみです。
  */
 void ABaseGameMode::PostLogin(APlayerController* _newPlayer)
 {
 	Super::PostLogin(_newPlayer);
-	UE_LOG(LogTemp, Log, TEXT("Player joined: %s"), *_newPlayer->GetName());
+
+	if (!_newPlayer) return;
+	UE_LOG(LogTemp, Log, TEXT("[BaseGameMode] Player joined: %s"), *_newPlayer->GetName());
+
+	// GameManager への通知などが必要ならここに追加予定
 }
 
 /**
- * @brief �v���C���[�����O�A�E�g�������̏���
- * @param Exiting ���O�A�E�g����v���C���[�R���g���[���[
+ * @brief プレイヤーがログアウトした際の処理
+ * @param _exiting ログアウトするプレイヤーのコントローラー
+ * @details
+ * - 通常はプレイヤーのクリーンアップ処理を実施します。
+ * - 現状はログを出力するのみです。
  */
 void ABaseGameMode::Logout(AController* _exiting)
 {
 	Super::Logout(_exiting);
-	UE_LOG(LogTemp, Log, TEXT("Player left: %s"), *_exiting->GetName());
+
+	if (!_exiting) return;
+	UE_LOG(LogTemp, Log, TEXT("[BaseGameMode] Player exited: %s"), *_exiting->GetName());
+
+	// 必要に応じて GameManager にも通知可能
 }

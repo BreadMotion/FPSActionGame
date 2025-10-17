@@ -21,11 +21,9 @@ public class FPSCore : ModuleRules
         PrivateDependencyModuleNames.AddRange(
             new string[]
             {
-                //"CoreModule", // あなたの Core モジュール名に合わせる
             }
         );
 
         PublicIncludePaths.AddRange(new string[] { "FPSSystem/Source" });
-        // PrivateIncludePaths.AddRange(new string[] { "FPSCore/Source/Core/" });
     }
 }
