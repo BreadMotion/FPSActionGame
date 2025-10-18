@@ -1,0 +1,326 @@
+[UE Project Tree Log] 
+ 
+------------------------------ 
+[Source] 
+------------------------------ 
+Folder PATH listing
+Volume serial number is 7A0C-1603
+D:\WORKING\UEPROJECT\FPSACTIONGAME\SOURCE
+|   FPSActionGame.Target.cs
+|   FPSActionGameEditor.Target.cs
+\---FPSActionGame
+    |   FPSActionGame.Build.cs
+    |   FPSActionGame.cpp
+    |   FPSActionGame.h
+        |       AnalyticsSystem.cpp
+        |       AnalyticsSystem.h
+        |       DataSystem.cpp
+        |       DataSystem.h
+        |       LootSystem.cpp
+        |       LootSystem.h
+        |       NetworkSystem.cpp
+        |       NetworkSystem.h
+        |       ProgressionSystem.cpp
+        |       ProgressionSystem.h
+                LocalSaveHandler.h
+                RemoteSaveHandler.h
+                SaveDataStructures.h
+                SaveManager.cpp
+                SaveManager.h
+                SaveSystem.cpp
+                SaveSystem.h
+ 
+------------------------------ 
+[Plugins] 
+------------------------------ 
+Folder PATH listing
+Volume serial number is 7A0C-1603
+D:\WORKING\UEPROJECT\FPSACTIONGAME\PLUGINS
++---FPSAbility
+|   |   FPSAbility.uplugin
+|   |                       |       Definitions.BaseAbility.h
+|   |                       |       Module.BaseAbility.cpp
+|   |                       |       PerModuleInline.gen.cpp
+|   |                               Definitions.FPSAbility.h
+|   |                               Module.FPSAbility.cpp
+|   |                               PerModuleInline.gen.cpp
+|       |   FPSAbility.Build.cs
+|               BaseAbility.cpp
+|               BaseAbility.h
+|               FPSAbility.cpp
+|               FPSAbility.h
++---FPSCharacter
+|   |   FPSCharacter.uplugin
+|   |           |       |           BaseCharacter.gen.cpp
+|   |           |       |           BaseCharacter.generated.h
+|   |           |       |           BaseCharacter.init.gen.cpp
+|   |           |       |           BaseCharacterClasses.h
+|   |           |       |           BaseEnemy.gen.cpp
+|   |           |       |           BaseEnemy.generated.h
+|   |           |       |           BaseEnemy.init.gen.cpp
+|   |           |       |           BaseEnemyClasses.h
+|   |           |       |           BasePlayer.gen.cpp
+|   |           |       |           BasePlayer.generated.h
+|   |           |       |           BasePlayer.init.gen.cpp
+|   |           |       |           BasePlayerClasses.h
+|   |           |                   BaseCharacter.gen.cpp
+|   |           |                   BaseCharacter.generated.h
+|   |           |                   BaseEnemy.gen.cpp
+|   |           |                   BaseEnemy.generated.h
+|   |           |                   BasePlayer.gen.cpp
+|   |           |                   BasePlayer.generated.h
+|   |           |                   FPSCharacter.init.gen.cpp
+|   |           |                   FPSCharacterClasses.h
+|   |                       |       Definitions.BaseCharacter.h
+|   |                       |       Module.BaseCharacter.cpp
+|   |                       |       PerModuleInline.gen.cpp
+|   |                       |       Definitions.BaseEnemy.h
+|   |                       |       Module.BaseEnemy.cpp
+|   |                       |       PerModuleInline.gen.cpp
+|   |                       |       Definitions.BasePlayer.h
+|   |                       |       Module.BasePlayer.cpp
+|   |                       |       PerModuleInline.gen.cpp
+|   |                       |       Definitions.FPSCharacter.h
+|   |                       |       Module.FPSCharacter.cpp
+|   |                       |       PerModuleInline.gen.cpp
+|   |                       |       Definitions.FPSEnemy.h
+|   |                       |       Module.FPSEnemy.cpp
+|   |                       |       PerModuleInline.gen.cpp
+|   |                               Definitions.FPSPlayer.h
+|   |                               Module.FPSPlayer.cpp
+|   |                               PerModuleInline.gen.cpp
+|       |   FPSCharacter.Build.cs
+|               BaseCharacter.cpp
+|               BaseCharacter.h
+|               BaseEnemy.cpp
+|               BaseEnemy.h
+|               BasePlayer.cpp
+|               BasePlayer.h
+|               FPSCharacter.cpp
+|               FPSCharacter.h
++---FPSCore
+|   |   FPSCore.uplugin
+|   |           |       |           BaseActor.gen.cpp
+|   |           |       |           BaseActor.generated.h
+|   |           |       |           BaseActor.init.gen.cpp
+|   |           |       |           BaseActorClasses.h
+|   |           |       |           BaseGameManager.gen.cpp
+|   |           |       |           BaseGameManager.generated.h
+|   |           |       |           BaseGameManager.init.gen.cpp
+|   |           |       |           BaseGameManagerClasses.h
+|   |           |       |           BaseGameMode.gen.cpp
+|   |           |       |           BaseGameMode.generated.h
+|   |           |       |           BaseGameMode.init.gen.cpp
+|   |           |       |           BaseGameModeClasses.h
+|   |           |       |           BaseGameState.gen.cpp
+|   |           |       |           BaseGameState.generated.h
+|   |           |       |           BaseGameState.init.gen.cpp
+|   |           |       |           BaseGameStateClasses.h
+|   |           |       |           BasePawn.gen.cpp
+|   |           |       |           BasePawn.generated.h
+|   |           |       |           BasePawn.init.gen.cpp
+|   |           |       |           BasePawnClasses.h
+|   |           |       |           BaseActor.gen.cpp
+|   |           |       |           BaseActor.generated.h
+|   |           |       |           FPSActor.init.gen.cpp
+|   |           |       |           FPSActorClasses.h
+|   |           |       |           BaseActor.gen.cpp
+|   |           |       |           BaseActor.generated.h
+|   |           |       |           BaseGameManager.gen.cpp
+|   |           |       |           BaseGameManager.generated.h
+|   |           |       |           BaseGameMode.gen.cpp
+|   |           |       |           BaseGameMode.generated.h
+|   |           |       |           BaseGameState.gen.cpp
+|   |           |       |           BaseGameState.generated.h
+|   |           |       |           BasePawn.gen.cpp
+|   |           |       |           BasePawn.generated.h
+|   |           |       |           FPSCore.init.gen.cpp
+|   |           |       |           FPSCoreClasses.h
+|   |           |       |           BaseGameManager.gen.cpp
+|   |           |       |           BaseGameManager.generated.h
+|   |           |       |           FPSGameManager.init.gen.cpp
+|   |           |       |           FPSGameManagerClasses.h
+|   |           |       |           BaseGameMode.gen.cpp
+|   |           |       |           BaseGameMode.generated.h
+|   |           |       |           FPSGameMode.init.gen.cpp
+|   |           |       |           FPSGameModeClasses.h
+|   |           |       |           BaseGameState.gen.cpp
+|   |           |       |           BaseGameState.generated.h
+|   |           |       |           FPSGameState.init.gen.cpp
+|   |           |       |           FPSGameStateClasses.h
+|   |           |                   BasePawn.gen.cpp
+|   |           |                   BasePawn.generated.h
+|   |           |                   FPSPawn.init.gen.cpp
+|   |           |                   FPSPawnClasses.h
+|   |                       |       Definitions.BaseActor.h
+|   |                       |       Module.BaseActor.cpp
+|   |                       |       PerModuleInline.gen.cpp
+|   |                       |       Definitions.BaseGameManager.h
+|   |                       |       Module.BaseGameManager.cpp
+|   |                       |       PerModuleInline.gen.cpp
+|   |                       |       Definitions.BaseGameMode.h
+|   |                       |       Module.BaseGameMode.cpp
+|   |                       |       PerModuleInline.gen.cpp
+|   |                       |       Definitions.BaseGameState.h
+|   |                       |       Module.BaseGameState.cpp
+|   |                       |       PerModuleInline.gen.cpp
+|   |                       |       Definitions.BasePawn.h
+|   |                       |       Module.BasePawn.cpp
+|   |                       |       PerModuleInline.gen.cpp
+|   |                       |       Definitions.BasePlayerController.h
+|   |                       |       Module.BasePlayerController.cpp
+|   |                       |       PerModuleInline.gen.cpp
+|   |                       |       Definitions.FPSActor.h
+|   |                       |       Module.FPSActor.cpp
+|   |                       |       PerModuleInline.gen.cpp
+|   |                       |       Definitions.FPSCore.h
+|   |                       |       Module.FPSCore.cpp
+|   |                       |       PerModuleInline.gen.cpp
+|   |                       |       Definitions.FPSGameManager.h
+|   |                       |       Module.FPSGameManager.cpp
+|   |                       |       PerModuleInline.gen.cpp
+|   |                       |       Definitions.FPSGameMode.h
+|   |                       |       Module.FPSGameMode.cpp
+|   |                       |       PerModuleInline.gen.cpp
+|   |                       |       Definitions.FPSGameState.h
+|   |                       |       Module.FPSGameState.cpp
+|   |                       |       PerModuleInline.gen.cpp
+|   |                       |       Definitions.FPSPawn.h
+|   |                       |       Module.FPSPawn.cpp
+|   |                       |       PerModuleInline.gen.cpp
+|   |                               Definitions.FPSPlayerController.h
+|   |                               Module.FPSPlayerController.cpp
+|   |                               PerModuleInline.gen.cpp
+|       |   FPSCore.Build.cs
+|               BaseActor.cpp
+|               BaseActor.h
+|               BaseGameManager.cpp
+|               BaseGameManager.h
+|               BaseGameMode.cpp
+|               BaseGameMode.h
+|               BaseGameState.cpp
+|               BaseGameState.h
+|               BasePawn.cpp
+|               BasePawn.h
+|               BasePlayerController.cpp
+|               BasePlayerController.h
+|               FPSCore.cpp
+|               FPSCore.h
++---FPSData
+|   |   FPSData.uplugin
+|   |           |                   BaseData.gen.cpp
+|   |           |                   BaseData.generated.h
+|   |           |                   FPSData.init.gen.cpp
+|   |           |                   FPSDataClasses.h
+|   |                       |       Definitions.BaseData.h
+|   |                       |       Module.BaseData.cpp
+|   |                       |       PerModuleInline.gen.cpp
+|   |                               Definitions.FPSData.h
+|   |                               Module.FPSData.cpp
+|   |                               PerModuleInline.gen.cpp
+|       |   FPSData.Build.cs
+|               BaseData.cpp
+|               BaseData.h
+|               FPSData.cpp
+|               FPSData.h
++---FPSInterface
+|   |   FPSInterface.uplugin
+|   |                       |       Definitions.BaseInterface.h
+|   |                       |       Module.BaseInterface.cpp
+|   |                       |       PerModuleInline.gen.cpp
+|   |                               Definitions.FPSInterface.h
+|   |                               Module.FPSInterface.cpp
+|   |                               PerModuleInline.gen.cpp
+|       |   FPSInterface.Build.cs
+|               BaseInterface.cpp
+|               BaseInterface.h
+|               FPSInterface.cpp
+|               FPSInterface.h
++---FPSItem
+|   |   FPSItem.uplugin
+|   |                       |       Definitions.BaseItem.h
+|   |                       |       Module.BaseItem.cpp
+|   |                       |       PerModuleInline.gen.cpp
+|   |                               Definitions.FPSItem.h
+|   |                               Module.FPSItem.cpp
+|   |                               PerModuleInline.gen.cpp
+|       |   FPSItem.Build.cs
+|               BaseItem.cpp
+|               BaseItem.h
+|               FPSItem.Build.cs
+|               FPSItem.cpp
+|               FPSItem.h
++---FPSSystem
+|   |   FPSSystem.uplugin
+|   |           |       |           BaseSystem.gen.cpp
+|   |           |       |           BaseSystem.generated.h
+|   |           |       |           BaseSystem.init.gen.cpp
+|   |           |       |           BaseSystemClasses.h
+|   |           |                   BaseSystem.gen.cpp
+|   |           |                   BaseSystem.generated.h
+|   |           |                   FPSSystem.init.gen.cpp
+|   |           |                   FPSSystemClasses.h
+|   |                       |       Definitions.BaseSystem.h
+|   |                       |       Module.BaseSystem.cpp
+|   |                       |       PerModuleInline.gen.cpp
+|   |                               Definitions.FPSSystem.h
+|   |                               Module.FPSSystem.cpp
+|   |                               PerModuleInline.gen.cpp
+|       |   FPSSystem.Build.cs
+|               BaseSystem.cpp
+|               BaseSystem.h
+|               FPSSystem.cpp
+|               FPSSystem.h
++---FPSUI
+|   |   FPSUI.uplugin
+|   |                       |       Definitions.BaseUI.h
+|   |                       |       Module.BaseUI.cpp
+|   |                       |       PerModuleInline.gen.cpp
+|   |                               Definitions.FPSUI.h
+|   |                               Module.FPSUI.cpp
+|   |                               PerModuleInline.gen.cpp
+|       |   FPSUI.Build.cs
+|               BaseUI.cpp
+|               BaseUI.h
+|               FPSUI.cpp
+|               FPSUI.h
++---FPSUtility
+|   |   FPSUtility.uplugin
+|   |                       |       Definitions.BaseUtility.h
+|   |                       |       Module.BaseUtility.cpp
+|   |                       |       PerModuleInline.gen.cpp
+|   |                               Definitions.FPSUtility.h
+|   |                               Module.FPSUtility.cpp
+|   |                               PerModuleInline.gen.cpp
+|       |   FPSUtility.Build.cs
+|               BaseUtility.cpp
+|               BaseUtility.h
+|               FPSUtility.cpp
+|               FPSUtility.h
++---FPSWeapon
+|   |   FPSWeapon.uplugin
+|   |                       |       Definitions.BaseWeapon.h
+|   |                       |       Module.BaseWeapon.cpp
+|   |                       |       PerModuleInline.gen.cpp
+|   |                               Definitions.FPSWeapon.h
+|   |                               Module.FPSWeapon.cpp
+|   |                               PerModuleInline.gen.cpp
+|       |   FPSWeapon.Build.cs
+|               BaseWeapon.cpp
+|               BaseWeapon.h
+|               FPSWeapon.cpp
+|               FPSWeapon.h
+\---FPSWorld
+    |   FPSWorld.uplugin
+    |                       |       Definitions.BaseWorld.h
+    |                       |       Module.BaseWorld.cpp
+    |                       |       PerModuleInline.gen.cpp
+    |                               Definitions.FPSWorld.h
+    |                               Module.FPSWorld.cpp
+    |                               PerModuleInline.gen.cpp
+        |   FPSWorld.Build.cs
+                BaseWorld.cpp
+                BaseWorld.h
+                FPSWorld.cpp
+                FPSWorld.h
+ 
