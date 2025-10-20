@@ -1,8 +1,14 @@
-name: doxygen-includes
+name: doxygen-pages
 
 on:
   push:
-  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build:
@@ -19,21 +25,17 @@ jobs:
         shell: bash
         run: |
           cat > Doxyfile <<'EOF'
-          # ---- 基本 ----
           PROJECT_NAME           = FPSActionGame
           OUTPUT_DIRECTORY       = docs
           GENERATE_HTML          = YES
           GENERATE_LATEX         = NO
           QUIET                  = YES
 
-          # ---- 入力 ----
           INPUT                  = Source Plugins
           RECURSIVE              = YES
           FILE_PATTERNS          = *.h *.hpp *.hh *.cpp
-          EXCLUDE                =
           EXCLUDE_PATTERNS       = */Intermediate/* */Binaries/* */DerivedDataCache/* */.git/*
 
-          # ---- UE マクロを無効化（字句解析用）----
           ENABLE_PREPROCESSING   = YES
           MACRO_EXPANSION        = YES
           EXPAND_ONLY_PREDEF     = YES
@@ -50,13 +52,10 @@ jobs:
           PREDEFINED            += check(...)=
           PREDEFINED            += ensure(...)=
 
-          # ---- 依存グラフ ----
           HAVE_DOT               = YES
           DOT_IMAGE_FORMAT       = svg
           INCLUDE_GRAPH          = YES
           INCLUDED_BY_GRAPH      = YES
-          CALL_GRAPH             = NO
-          CALLER_GRAPH           = NO
           DOT_TRANSPARENT        = YES
           DOT_GRAPH_MAX_NODES    = 200
           EOF
@@ -64,8 +63,18 @@ jobs:
       - name: Run Doxygen
         run: doxygen Doxyfile
 
-      - name: Upload HTML
-        uses: actions/upload-artifact@v4
+      - name: Upload HTML to Pages
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: doxygen-html
           path: docs/html
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
