@@ -7,30 +7,6 @@ setlocal ENABLEDELAYEDEXPANSION
 set "TargetDir=%~dp0.."
 cd /d "%TargetDir%"
 
-echo ============================================
-echo Unreal Engine プロジェクト クリーンアップツール
-echo ============================================
-echo 対象ディレクトリ: %cd%
-echo.
-
-REM --- 一時ファイル削除 ---
-for %%d in (
-    ".vs"
-    "Binaries"
-    "DerivedDataCache"
-    "Intermediate"
-    "Saved"
-) do (
-    if exist %%~d (
-        echo 削除中 : %%~d
-        rmdir /s /q %%~d
-    )
-)
-
-echo.
-echo クリーンアップ完了！
-echo.
-
 REM --- .uproject 検出 ---
 set "uproject="
 for %%f in (*.uproject) do set "uproject=%%f"

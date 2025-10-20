@@ -30,16 +30,4 @@ for %%d in (
 echo.
 echo クリーンアップ完了！
 echo.
-
-REM --- .uproject 検出 ---
-set "uproject="
-for %%f in (*.uproject) do set "uproject=%%f"
-
-if "%uproject%"=="" (
-    echo .uproject ファイルが見つかりません。
-    pause
-    exit /b 1
-)
-
-echo.
-pause
+pause 
