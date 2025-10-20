@@ -13,7 +13,7 @@
  * - ゲーム終了時に各システムの終了処理を一括実行します。
  */
 UCLASS()
-class FPSCORE_API UGameSystem : public UBaseSystem
+class FPSACTIONGAME_API UGameSystem : public UBaseSystem
 {
 	GENERATED_BODY()
 
