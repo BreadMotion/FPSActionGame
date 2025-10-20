@@ -1,0 +1,15 @@
+{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "1.0",
+  "FriendlyName": "FPS World Plugin",
+  "Description": "FPSActionGame Project's World Plugin.",
+  "Category": "Gameplay",
+  "Modules": [
+    {
+      "Name": "FPSWorld",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    }
+  ]
+}

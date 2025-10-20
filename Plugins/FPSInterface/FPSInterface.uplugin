@@ -1,0 +1,15 @@
+{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "1.0",
+  "FriendlyName": "FPS Interface Plugin",
+  "Description": "FPSActionGame Project's Interface Plugin.",
+  "Category": "Gameplay",
+  "Modules": [
+    {
+      "Name": "FPSInterface",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    }
+  ]
+}

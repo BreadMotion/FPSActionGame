@@ -1,0 +1,613 @@
+[UE Project Tree Log] 
+ 
+------------------------------ 
+[Source] 
+------------------------------ 
+Source\FPSActionGame\
+    Source\FPSActionGame.Target.cs
+    Source\FPSActionGameEditor.Target.cs
+Source\FPSActionGame\System\
+    Source\FPSActionGame\FPSActionGame.Build.cs
+    Source\FPSActionGame\FPSActionGame.cpp
+    Source\FPSActionGame\FPSActionGame.h
+Source\FPSActionGame\System\AnalyticsSystem\
+Source\FPSActionGame\System\DataSystem\
+Source\FPSActionGame\System\LootSystem\
+Source\FPSActionGame\System\NetworkSystem\
+Source\FPSActionGame\System\ProgressionSystem\
+Source\FPSActionGame\System\SaveSystem\
+    Source\FPSActionGame\System\AnalyticsSystem\AnalyticsSystem.cpp
+    Source\FPSActionGame\System\AnalyticsSystem\AnalyticsSystem.h
+    Source\FPSActionGame\System\DataSystem\DataSystem.cpp
+    Source\FPSActionGame\System\DataSystem\DataSystem.h
+    Source\FPSActionGame\System\LootSystem\LootSystem.cpp
+    Source\FPSActionGame\System\LootSystem\LootSystem.h
+    Source\FPSActionGame\System\NetworkSystem\NetworkSystem.cpp
+    Source\FPSActionGame\System\NetworkSystem\NetworkSystem.h
+    Source\FPSActionGame\System\ProgressionSystem\ProgressionSystem.cpp
+    Source\FPSActionGame\System\ProgressionSystem\ProgressionSystem.h
+    Source\FPSActionGame\System\SaveSystem\LocalSaveHandler.h
+    Source\FPSActionGame\System\SaveSystem\RemoteSaveHandler.h
+    Source\FPSActionGame\System\SaveSystem\SaveDataStructures.h
+    Source\FPSActionGame\System\SaveSystem\SaveManager.cpp
+    Source\FPSActionGame\System\SaveSystem\SaveManager.h
+    Source\FPSActionGame\System\SaveSystem\SaveSystem.cpp
+    Source\FPSActionGame\System\SaveSystem\SaveSystem.h
+------------------------------ 
+[Plugins] 
+------------------------------ 
+Plugins\FPSAbility\
+Plugins\FPSCharacter\
+Plugins\FPSCore\
+Plugins\FPSData\
+Plugins\FPSInterface\
+Plugins\FPSItem\
+Plugins\FPSSystem\
+Plugins\FPSUI\
+Plugins\FPSUtility\
+Plugins\FPSWeapon\
+Plugins\FPSWorld\
+Plugins\FPSAbility\Binaries\
+Plugins\FPSAbility\Intermediate\
+Plugins\FPSAbility\Source\
+    Plugins\FPSAbility\FPSAbility.uplugin
+Plugins\FPSAbility\Binaries\Win64\
+Plugins\FPSAbility\Intermediate\Build\
+Plugins\FPSAbility\Intermediate\Build\Win64\
+Plugins\FPSAbility\Intermediate\Build\Win64\x64\
+Plugins\FPSAbility\Intermediate\Build\Win64\x64\UnrealEditor\
+Plugins\FPSAbility\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\
+Plugins\FPSAbility\Intermediate\Build\Win64\x64\UnrealEditor\Development\
+Plugins\FPSAbility\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSAbility\
+    Plugins\FPSAbility\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSAbility\Definitions.FPSAbility.h
+    Plugins\FPSAbility\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSAbility\Module.FPSAbility.cpp
+    Plugins\FPSAbility\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSAbility\PerModuleInline.gen.cpp
+Plugins\FPSAbility\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseAbility\
+Plugins\FPSAbility\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSAbility\
+    Plugins\FPSAbility\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseAbility\Definitions.BaseAbility.h
+    Plugins\FPSAbility\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseAbility\Module.BaseAbility.cpp
+    Plugins\FPSAbility\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseAbility\PerModuleInline.gen.cpp
+    Plugins\FPSAbility\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSAbility\Definitions.FPSAbility.h
+    Plugins\FPSAbility\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSAbility\Module.FPSAbility.cpp
+    Plugins\FPSAbility\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSAbility\PerModuleInline.gen.cpp
+Plugins\FPSAbility\Source\FPSAbility\
+    Plugins\FPSAbility\Source\FPSAbility.Build.cs
+    Plugins\FPSAbility\Source\FPSAbility\BaseAbility.cpp
+    Plugins\FPSAbility\Source\FPSAbility\BaseAbility.h
+    Plugins\FPSAbility\Source\FPSAbility\FPSAbility.cpp
+    Plugins\FPSAbility\Source\FPSAbility\FPSAbility.h
+Plugins\FPSCharacter\Binaries\
+Plugins\FPSCharacter\Intermediate\
+Plugins\FPSCharacter\Source\
+    Plugins\FPSCharacter\FPSCharacter.uplugin
+Plugins\FPSCharacter\Binaries\Win64\
+Plugins\FPSCharacter\Intermediate\Build\
+Plugins\FPSCharacter\Intermediate\Build\Win64\
+Plugins\FPSCharacter\Intermediate\Build\Win64\UnrealEditor\
+Plugins\FPSCharacter\Intermediate\Build\Win64\x64\
+Plugins\FPSCharacter\Intermediate\Build\Win64\UnrealEditor\Inc\
+Plugins\FPSCharacter\Intermediate\Build\Win64\UnrealEditor\Inc\BaseCharacter\
+Plugins\FPSCharacter\Intermediate\Build\Win64\UnrealEditor\Inc\BaseEnemy\
+Plugins\FPSCharacter\Intermediate\Build\Win64\UnrealEditor\Inc\BasePlayer\
+Plugins\FPSCharacter\Intermediate\Build\Win64\UnrealEditor\Inc\FPSCharacter\
+Plugins\FPSCharacter\Intermediate\Build\Win64\UnrealEditor\Inc\BaseCharacter\UHT\
+    Plugins\FPSCharacter\Intermediate\Build\Win64\UnrealEditor\Inc\BaseCharacter\UHT\BaseCharacter.gen.cpp
+    Plugins\FPSCharacter\Intermediate\Build\Win64\UnrealEditor\Inc\BaseCharacter\UHT\BaseCharacter.generated.h
+    Plugins\FPSCharacter\Intermediate\Build\Win64\UnrealEditor\Inc\BaseCharacter\UHT\BaseCharacter.init.gen.cpp
+    Plugins\FPSCharacter\Intermediate\Build\Win64\UnrealEditor\Inc\BaseCharacter\UHT\BaseCharacterClasses.h
+Plugins\FPSCharacter\Intermediate\Build\Win64\UnrealEditor\Inc\BaseEnemy\UHT\
+    Plugins\FPSCharacter\Intermediate\Build\Win64\UnrealEditor\Inc\BaseEnemy\UHT\BaseEnemy.gen.cpp
+    Plugins\FPSCharacter\Intermediate\Build\Win64\UnrealEditor\Inc\BaseEnemy\UHT\BaseEnemy.generated.h
+    Plugins\FPSCharacter\Intermediate\Build\Win64\UnrealEditor\Inc\BaseEnemy\UHT\BaseEnemy.init.gen.cpp
+    Plugins\FPSCharacter\Intermediate\Build\Win64\UnrealEditor\Inc\BaseEnemy\UHT\BaseEnemyClasses.h
+Plugins\FPSCharacter\Intermediate\Build\Win64\UnrealEditor\Inc\BasePlayer\UHT\
+    Plugins\FPSCharacter\Intermediate\Build\Win64\UnrealEditor\Inc\BasePlayer\UHT\BasePlayer.gen.cpp
+    Plugins\FPSCharacter\Intermediate\Build\Win64\UnrealEditor\Inc\BasePlayer\UHT\BasePlayer.generated.h
+    Plugins\FPSCharacter\Intermediate\Build\Win64\UnrealEditor\Inc\BasePlayer\UHT\BasePlayer.init.gen.cpp
+    Plugins\FPSCharacter\Intermediate\Build\Win64\UnrealEditor\Inc\BasePlayer\UHT\BasePlayerClasses.h
+Plugins\FPSCharacter\Intermediate\Build\Win64\UnrealEditor\Inc\FPSCharacter\UHT\
+    Plugins\FPSCharacter\Intermediate\Build\Win64\UnrealEditor\Inc\FPSCharacter\UHT\BaseCharacter.gen.cpp
+    Plugins\FPSCharacter\Intermediate\Build\Win64\UnrealEditor\Inc\FPSCharacter\UHT\BaseCharacter.generated.h
+    Plugins\FPSCharacter\Intermediate\Build\Win64\UnrealEditor\Inc\FPSCharacter\UHT\BaseEnemy.gen.cpp
+    Plugins\FPSCharacter\Intermediate\Build\Win64\UnrealEditor\Inc\FPSCharacter\UHT\BaseEnemy.generated.h
+    Plugins\FPSCharacter\Intermediate\Build\Win64\UnrealEditor\Inc\FPSCharacter\UHT\BasePlayer.gen.cpp
+    Plugins\FPSCharacter\Intermediate\Build\Win64\UnrealEditor\Inc\FPSCharacter\UHT\BasePlayer.generated.h
+    Plugins\FPSCharacter\Intermediate\Build\Win64\UnrealEditor\Inc\FPSCharacter\UHT\FPSCharacter.init.gen.cpp
+    Plugins\FPSCharacter\Intermediate\Build\Win64\UnrealEditor\Inc\FPSCharacter\UHT\FPSCharacterClasses.h
+Plugins\FPSCharacter\Intermediate\Build\Win64\x64\UnrealEditor\
+Plugins\FPSCharacter\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\
+Plugins\FPSCharacter\Intermediate\Build\Win64\x64\UnrealEditor\Development\
+Plugins\FPSCharacter\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSCharacter\
+Plugins\FPSCharacter\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSEnemy\
+Plugins\FPSCharacter\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSPlayer\
+    Plugins\FPSCharacter\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSCharacter\Definitions.FPSCharacter.h
+    Plugins\FPSCharacter\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSCharacter\Module.FPSCharacter.cpp
+    Plugins\FPSCharacter\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSCharacter\PerModuleInline.gen.cpp
+    Plugins\FPSCharacter\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSEnemy\Definitions.FPSEnemy.h
+    Plugins\FPSCharacter\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSEnemy\Module.FPSEnemy.cpp
+    Plugins\FPSCharacter\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSEnemy\PerModuleInline.gen.cpp
+    Plugins\FPSCharacter\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSPlayer\Definitions.FPSPlayer.h
+    Plugins\FPSCharacter\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSPlayer\Module.FPSPlayer.cpp
+    Plugins\FPSCharacter\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSPlayer\PerModuleInline.gen.cpp
+Plugins\FPSCharacter\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseCharacter\
+Plugins\FPSCharacter\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseEnemy\
+Plugins\FPSCharacter\Intermediate\Build\Win64\x64\UnrealEditor\Development\BasePlayer\
+Plugins\FPSCharacter\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSCharacter\
+Plugins\FPSCharacter\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSEnemy\
+Plugins\FPSCharacter\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSPlayer\
+    Plugins\FPSCharacter\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseCharacter\Definitions.BaseCharacter.h
+    Plugins\FPSCharacter\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseCharacter\Module.BaseCharacter.cpp
+    Plugins\FPSCharacter\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseCharacter\PerModuleInline.gen.cpp
+    Plugins\FPSCharacter\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseEnemy\Definitions.BaseEnemy.h
+    Plugins\FPSCharacter\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseEnemy\Module.BaseEnemy.cpp
+    Plugins\FPSCharacter\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseEnemy\PerModuleInline.gen.cpp
+    Plugins\FPSCharacter\Intermediate\Build\Win64\x64\UnrealEditor\Development\BasePlayer\Definitions.BasePlayer.h
+    Plugins\FPSCharacter\Intermediate\Build\Win64\x64\UnrealEditor\Development\BasePlayer\Module.BasePlayer.cpp
+    Plugins\FPSCharacter\Intermediate\Build\Win64\x64\UnrealEditor\Development\BasePlayer\PerModuleInline.gen.cpp
+    Plugins\FPSCharacter\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSCharacter\Definitions.FPSCharacter.h
+    Plugins\FPSCharacter\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSCharacter\Module.FPSCharacter.cpp
+    Plugins\FPSCharacter\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSCharacter\PerModuleInline.gen.cpp
+    Plugins\FPSCharacter\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSEnemy\Definitions.FPSEnemy.h
+    Plugins\FPSCharacter\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSEnemy\Module.FPSEnemy.cpp
+    Plugins\FPSCharacter\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSEnemy\PerModuleInline.gen.cpp
+    Plugins\FPSCharacter\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSPlayer\Definitions.FPSPlayer.h
+    Plugins\FPSCharacter\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSPlayer\Module.FPSPlayer.cpp
+    Plugins\FPSCharacter\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSPlayer\PerModuleInline.gen.cpp
+Plugins\FPSCharacter\Source\FPSCharacter\
+    Plugins\FPSCharacter\Source\FPSCharacter.Build.cs
+    Plugins\FPSCharacter\Source\FPSCharacter\BaseCharacter.cpp
+    Plugins\FPSCharacter\Source\FPSCharacter\BaseCharacter.h
+    Plugins\FPSCharacter\Source\FPSCharacter\BaseEnemy.cpp
+    Plugins\FPSCharacter\Source\FPSCharacter\BaseEnemy.h
+    Plugins\FPSCharacter\Source\FPSCharacter\BasePlayer.cpp
+    Plugins\FPSCharacter\Source\FPSCharacter\BasePlayer.h
+    Plugins\FPSCharacter\Source\FPSCharacter\FPSCharacter.cpp
+    Plugins\FPSCharacter\Source\FPSCharacter\FPSCharacter.h
+Plugins\FPSCore\Binaries\
+Plugins\FPSCore\Intermediate\
+Plugins\FPSCore\Source\
+    Plugins\FPSCore\FPSCore.uplugin
+Plugins\FPSCore\Binaries\Win64\
+Plugins\FPSCore\Intermediate\Build\
+Plugins\FPSCore\Intermediate\Build\Win64\
+Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\
+Plugins\FPSCore\Intermediate\Build\Win64\x64\
+Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\
+Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\BaseActor\
+Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\BaseGameManager\
+Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\BaseGameMode\
+Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\BaseGameState\
+Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\BasePawn\
+Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSActor\
+Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSCore\
+Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSGameInstance\
+Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSGameManager\
+Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSGameMode\
+Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSGameState\
+Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSPawn\
+Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\BaseActor\UHT\
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\BaseActor\UHT\BaseActor.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\BaseActor\UHT\BaseActor.generated.h
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\BaseActor\UHT\BaseActor.init.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\BaseActor\UHT\BaseActorClasses.h
+Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\BaseGameManager\UHT\
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\BaseGameManager\UHT\BaseGameManager.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\BaseGameManager\UHT\BaseGameManager.generated.h
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\BaseGameManager\UHT\BaseGameManager.init.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\BaseGameManager\UHT\BaseGameManagerClasses.h
+Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\BaseGameMode\UHT\
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\BaseGameMode\UHT\BaseGameMode.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\BaseGameMode\UHT\BaseGameMode.generated.h
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\BaseGameMode\UHT\BaseGameMode.init.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\BaseGameMode\UHT\BaseGameModeClasses.h
+Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\BaseGameState\UHT\
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\BaseGameState\UHT\BaseGameState.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\BaseGameState\UHT\BaseGameState.generated.h
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\BaseGameState\UHT\BaseGameState.init.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\BaseGameState\UHT\BaseGameStateClasses.h
+Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\BasePawn\UHT\
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\BasePawn\UHT\BasePawn.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\BasePawn\UHT\BasePawn.generated.h
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\BasePawn\UHT\BasePawn.init.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\BasePawn\UHT\BasePawnClasses.h
+Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSActor\UHT\
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSActor\UHT\BaseActor.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSActor\UHT\BaseActor.generated.h
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSActor\UHT\FPSActor.init.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSActor\UHT\FPSActorClasses.h
+Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSCore\UHT\
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSCore\UHT\BaseActor.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSCore\UHT\BaseActor.generated.h
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSCore\UHT\BaseGameManager.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSCore\UHT\BaseGameManager.generated.h
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSCore\UHT\BaseGameMode.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSCore\UHT\BaseGameMode.generated.h
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSCore\UHT\BaseGameState.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSCore\UHT\BaseGameState.generated.h
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSCore\UHT\BasePawn.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSCore\UHT\BasePawn.generated.h
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSCore\UHT\FPSCore.init.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSCore\UHT\FPSCoreClasses.h
+Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSGameInstance\UHT\
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSGameInstance\UHT\BaseGameManager.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSGameInstance\UHT\BaseGameManager.generated.h
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSGameInstance\UHT\FPSGameInstance.init.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSGameInstance\UHT\FPSGameInstanceClasses.h
+Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSGameManager\UHT\
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSGameManager\UHT\BaseGameManager.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSGameManager\UHT\BaseGameManager.generated.h
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSGameManager\UHT\FPSGameManager.init.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSGameManager\UHT\FPSGameManagerClasses.h
+Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSGameMode\UHT\
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSGameMode\UHT\BaseGameMode.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSGameMode\UHT\BaseGameMode.generated.h
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSGameMode\UHT\FPSGameMode.init.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSGameMode\UHT\FPSGameModeClasses.h
+Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSGameState\UHT\
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSGameState\UHT\BaseGameState.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSGameState\UHT\BaseGameState.generated.h
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSGameState\UHT\FPSGameState.init.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSGameState\UHT\FPSGameStateClasses.h
+Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSPawn\UHT\
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSPawn\UHT\BasePawn.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSPawn\UHT\BasePawn.generated.h
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSPawn\UHT\FPSPawn.init.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\UnrealEditor\Inc\FPSPawn\UHT\FPSPawnClasses.h
+Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\
+Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\
+Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\
+Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSActor\
+Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSCore\
+Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSGameManager\
+Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSGameMode\
+Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSGameState\
+Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSPawn\
+Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSPlayerController\
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSActor\Definitions.FPSActor.h
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSActor\Module.FPSActor.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSActor\PerModuleInline.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSCore\Definitions.FPSCore.h
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSCore\Module.FPSCore.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSCore\PerModuleInline.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSGameManager\Definitions.FPSGameManager.h
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSGameManager\Module.FPSGameManager.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSGameManager\PerModuleInline.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSGameMode\Definitions.FPSGameMode.h
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSGameMode\Module.FPSGameMode.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSGameMode\PerModuleInline.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSGameState\Definitions.FPSGameState.h
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSGameState\Module.FPSGameState.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSGameState\PerModuleInline.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSPawn\Definitions.FPSPawn.h
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSPawn\Module.FPSPawn.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSPawn\PerModuleInline.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSPlayerController\Definitions.FPSPlayerController.h
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSPlayerController\Module.FPSPlayerController.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSPlayerController\PerModuleInline.gen.cpp
+Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseActor\
+Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseGameManager\
+Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseGameMode\
+Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseGameState\
+Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\BasePawn\
+Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\BasePlayerController\
+Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSActor\
+Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSCore\
+Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSGameInstance\
+Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSGameManager\
+Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSGameMode\
+Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSGameState\
+Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSPawn\
+Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSPlayerController\
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseActor\Definitions.BaseActor.h
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseActor\Module.BaseActor.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseActor\PerModuleInline.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseGameManager\Definitions.BaseGameManager.h
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseGameManager\Module.BaseGameManager.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseGameManager\PerModuleInline.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseGameMode\Definitions.BaseGameMode.h
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseGameMode\Module.BaseGameMode.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseGameMode\PerModuleInline.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseGameState\Definitions.BaseGameState.h
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseGameState\Module.BaseGameState.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseGameState\PerModuleInline.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\BasePawn\Definitions.BasePawn.h
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\BasePawn\Module.BasePawn.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\BasePawn\PerModuleInline.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\BasePlayerController\Definitions.BasePlayerController.h
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\BasePlayerController\Module.BasePlayerController.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\BasePlayerController\PerModuleInline.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSActor\Definitions.FPSActor.h
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSActor\Module.FPSActor.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSActor\PerModuleInline.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSCore\Definitions.FPSCore.h
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSCore\Module.FPSCore.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSCore\PerModuleInline.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSGameInstance\Definitions.FPSGameInstance.h
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSGameInstance\Module.FPSGameInstance.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSGameInstance\PerModuleInline.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSGameManager\Definitions.FPSGameManager.h
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSGameManager\Module.FPSGameManager.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSGameManager\PerModuleInline.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSGameMode\Definitions.FPSGameMode.h
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSGameMode\Module.FPSGameMode.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSGameMode\PerModuleInline.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSGameState\Definitions.FPSGameState.h
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSGameState\Module.FPSGameState.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSGameState\PerModuleInline.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSPawn\Definitions.FPSPawn.h
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSPawn\Module.FPSPawn.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSPawn\PerModuleInline.gen.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSPlayerController\Definitions.FPSPlayerController.h
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSPlayerController\Module.FPSPlayerController.cpp
+    Plugins\FPSCore\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSPlayerController\PerModuleInline.gen.cpp
+Plugins\FPSCore\Source\FPSCore\
+    Plugins\FPSCore\Source\FPSCore.Build.cs
+    Plugins\FPSCore\Source\FPSCore\BaseActor.cpp
+    Plugins\FPSCore\Source\FPSCore\BaseActor.h
+    Plugins\FPSCore\Source\FPSCore\BaseGameManager.cpp
+    Plugins\FPSCore\Source\FPSCore\BaseGameManager.h
+    Plugins\FPSCore\Source\FPSCore\BaseGameMode.cpp
+    Plugins\FPSCore\Source\FPSCore\BaseGameMode.h
+    Plugins\FPSCore\Source\FPSCore\BaseGameState.cpp
+    Plugins\FPSCore\Source\FPSCore\BaseGameState.h
+    Plugins\FPSCore\Source\FPSCore\BasePawn.cpp
+    Plugins\FPSCore\Source\FPSCore\BasePawn.h
+    Plugins\FPSCore\Source\FPSCore\BasePlayerController.cpp
+    Plugins\FPSCore\Source\FPSCore\BasePlayerController.h
+    Plugins\FPSCore\Source\FPSCore\FPSCore.cpp
+    Plugins\FPSCore\Source\FPSCore\FPSCore.h
+Plugins\FPSData\Binaries\
+Plugins\FPSData\Intermediate\
+Plugins\FPSData\Source\
+    Plugins\FPSData\FPSData.uplugin
+Plugins\FPSData\Binaries\Win64\
+Plugins\FPSData\Intermediate\Build\
+Plugins\FPSData\Intermediate\Build\Win64\
+Plugins\FPSData\Intermediate\Build\Win64\UnrealEditor\
+Plugins\FPSData\Intermediate\Build\Win64\x64\
+Plugins\FPSData\Intermediate\Build\Win64\UnrealEditor\Inc\
+Plugins\FPSData\Intermediate\Build\Win64\UnrealEditor\Inc\FPSData\
+Plugins\FPSData\Intermediate\Build\Win64\UnrealEditor\Inc\FPSData\UHT\
+    Plugins\FPSData\Intermediate\Build\Win64\UnrealEditor\Inc\FPSData\UHT\BaseData.gen.cpp
+    Plugins\FPSData\Intermediate\Build\Win64\UnrealEditor\Inc\FPSData\UHT\BaseData.generated.h
+    Plugins\FPSData\Intermediate\Build\Win64\UnrealEditor\Inc\FPSData\UHT\FPSData.init.gen.cpp
+    Plugins\FPSData\Intermediate\Build\Win64\UnrealEditor\Inc\FPSData\UHT\FPSDataClasses.h
+Plugins\FPSData\Intermediate\Build\Win64\x64\UnrealEditor\
+Plugins\FPSData\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\
+Plugins\FPSData\Intermediate\Build\Win64\x64\UnrealEditor\Development\
+Plugins\FPSData\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSData\
+    Plugins\FPSData\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSData\Definitions.FPSData.h
+    Plugins\FPSData\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSData\Module.FPSData.cpp
+    Plugins\FPSData\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSData\PerModuleInline.gen.cpp
+Plugins\FPSData\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseData\
+Plugins\FPSData\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSData\
+    Plugins\FPSData\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseData\Definitions.BaseData.h
+    Plugins\FPSData\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseData\Module.BaseData.cpp
+    Plugins\FPSData\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseData\PerModuleInline.gen.cpp
+    Plugins\FPSData\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSData\Definitions.FPSData.h
+    Plugins\FPSData\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSData\Module.FPSData.cpp
+    Plugins\FPSData\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSData\PerModuleInline.gen.cpp
+Plugins\FPSData\Source\FPSData\
+    Plugins\FPSData\Source\FPSData.Build.cs
+    Plugins\FPSData\Source\FPSData\BaseData.cpp
+    Plugins\FPSData\Source\FPSData\BaseData.h
+    Plugins\FPSData\Source\FPSData\FPSData.cpp
+    Plugins\FPSData\Source\FPSData\FPSData.h
+Plugins\FPSInterface\Binaries\
+Plugins\FPSInterface\Intermediate\
+Plugins\FPSInterface\Source\
+    Plugins\FPSInterface\FPSInterface.uplugin
+Plugins\FPSInterface\Binaries\Win64\
+Plugins\FPSInterface\Intermediate\Build\
+Plugins\FPSInterface\Intermediate\Build\Win64\
+Plugins\FPSInterface\Intermediate\Build\Win64\x64\
+Plugins\FPSInterface\Intermediate\Build\Win64\x64\UnrealEditor\
+Plugins\FPSInterface\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\
+Plugins\FPSInterface\Intermediate\Build\Win64\x64\UnrealEditor\Development\
+Plugins\FPSInterface\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSInterface\
+    Plugins\FPSInterface\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSInterface\Definitions.FPSInterface.h
+    Plugins\FPSInterface\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSInterface\Module.FPSInterface.cpp
+    Plugins\FPSInterface\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSInterface\PerModuleInline.gen.cpp
+Plugins\FPSInterface\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseInterface\
+Plugins\FPSInterface\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSInterface\
+    Plugins\FPSInterface\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseInterface\Definitions.BaseInterface.h
+    Plugins\FPSInterface\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseInterface\Module.BaseInterface.cpp
+    Plugins\FPSInterface\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseInterface\PerModuleInline.gen.cpp
+    Plugins\FPSInterface\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSInterface\Definitions.FPSInterface.h
+    Plugins\FPSInterface\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSInterface\Module.FPSInterface.cpp
+    Plugins\FPSInterface\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSInterface\PerModuleInline.gen.cpp
+Plugins\FPSInterface\Source\FPSInterface\
+    Plugins\FPSInterface\Source\FPSInterface.Build.cs
+    Plugins\FPSInterface\Source\FPSInterface\BaseInterface.cpp
+    Plugins\FPSInterface\Source\FPSInterface\BaseInterface.h
+    Plugins\FPSInterface\Source\FPSInterface\FPSInterface.cpp
+    Plugins\FPSInterface\Source\FPSInterface\FPSInterface.h
+Plugins\FPSItem\Binaries\
+Plugins\FPSItem\Intermediate\
+Plugins\FPSItem\Source\
+    Plugins\FPSItem\FPSItem.uplugin
+Plugins\FPSItem\Binaries\Win64\
+Plugins\FPSItem\Intermediate\Build\
+Plugins\FPSItem\Intermediate\Build\Win64\
+Plugins\FPSItem\Intermediate\Build\Win64\x64\
+Plugins\FPSItem\Intermediate\Build\Win64\x64\UnrealEditor\
+Plugins\FPSItem\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\
+Plugins\FPSItem\Intermediate\Build\Win64\x64\UnrealEditor\Development\
+Plugins\FPSItem\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSItem\
+    Plugins\FPSItem\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSItem\Definitions.FPSItem.h
+    Plugins\FPSItem\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSItem\Module.FPSItem.cpp
+    Plugins\FPSItem\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSItem\PerModuleInline.gen.cpp
+Plugins\FPSItem\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseItem\
+Plugins\FPSItem\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSItem\
+    Plugins\FPSItem\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseItem\Definitions.BaseItem.h
+    Plugins\FPSItem\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseItem\Module.BaseItem.cpp
+    Plugins\FPSItem\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseItem\PerModuleInline.gen.cpp
+    Plugins\FPSItem\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSItem\Definitions.FPSItem.h
+    Plugins\FPSItem\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSItem\Module.FPSItem.cpp
+    Plugins\FPSItem\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSItem\PerModuleInline.gen.cpp
+Plugins\FPSItem\Source\FPSItem\
+    Plugins\FPSItem\Source\FPSItem.Build.cs
+    Plugins\FPSItem\Source\FPSItem\BaseItem.cpp
+    Plugins\FPSItem\Source\FPSItem\BaseItem.h
+    Plugins\FPSItem\Source\FPSItem\FPSItem.Build.cs
+    Plugins\FPSItem\Source\FPSItem\FPSItem.cpp
+    Plugins\FPSItem\Source\FPSItem\FPSItem.h
+Plugins\FPSSystem\Binaries\
+Plugins\FPSSystem\Intermediate\
+Plugins\FPSSystem\Source\
+    Plugins\FPSSystem\FPSSystem.uplugin
+Plugins\FPSSystem\Binaries\Win64\
+Plugins\FPSSystem\Intermediate\Build\
+Plugins\FPSSystem\Intermediate\Build\Win64\
+Plugins\FPSSystem\Intermediate\Build\Win64\UnrealEditor\
+Plugins\FPSSystem\Intermediate\Build\Win64\x64\
+Plugins\FPSSystem\Intermediate\Build\Win64\UnrealEditor\Inc\
+Plugins\FPSSystem\Intermediate\Build\Win64\UnrealEditor\Inc\BaseSystem\
+Plugins\FPSSystem\Intermediate\Build\Win64\UnrealEditor\Inc\FPSSystem\
+Plugins\FPSSystem\Intermediate\Build\Win64\UnrealEditor\Inc\BaseSystem\UHT\
+    Plugins\FPSSystem\Intermediate\Build\Win64\UnrealEditor\Inc\BaseSystem\UHT\BaseSystem.gen.cpp
+    Plugins\FPSSystem\Intermediate\Build\Win64\UnrealEditor\Inc\BaseSystem\UHT\BaseSystem.generated.h
+    Plugins\FPSSystem\Intermediate\Build\Win64\UnrealEditor\Inc\BaseSystem\UHT\BaseSystem.init.gen.cpp
+    Plugins\FPSSystem\Intermediate\Build\Win64\UnrealEditor\Inc\BaseSystem\UHT\BaseSystemClasses.h
+Plugins\FPSSystem\Intermediate\Build\Win64\UnrealEditor\Inc\FPSSystem\UHT\
+    Plugins\FPSSystem\Intermediate\Build\Win64\UnrealEditor\Inc\FPSSystem\UHT\BaseSystem.gen.cpp
+    Plugins\FPSSystem\Intermediate\Build\Win64\UnrealEditor\Inc\FPSSystem\UHT\BaseSystem.generated.h
+    Plugins\FPSSystem\Intermediate\Build\Win64\UnrealEditor\Inc\FPSSystem\UHT\FPSSystem.init.gen.cpp
+    Plugins\FPSSystem\Intermediate\Build\Win64\UnrealEditor\Inc\FPSSystem\UHT\FPSSystemClasses.h
+Plugins\FPSSystem\Intermediate\Build\Win64\x64\UnrealEditor\
+Plugins\FPSSystem\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\
+Plugins\FPSSystem\Intermediate\Build\Win64\x64\UnrealEditor\Development\
+Plugins\FPSSystem\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSSystem\
+    Plugins\FPSSystem\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSSystem\Definitions.FPSSystem.h
+    Plugins\FPSSystem\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSSystem\Module.FPSSystem.cpp
+    Plugins\FPSSystem\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSSystem\PerModuleInline.gen.cpp
+Plugins\FPSSystem\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseSystem\
+Plugins\FPSSystem\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSSystem\
+    Plugins\FPSSystem\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseSystem\Definitions.BaseSystem.h
+    Plugins\FPSSystem\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseSystem\Module.BaseSystem.cpp
+    Plugins\FPSSystem\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseSystem\PerModuleInline.gen.cpp
+    Plugins\FPSSystem\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSSystem\Definitions.FPSSystem.h
+    Plugins\FPSSystem\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSSystem\Module.FPSSystem.cpp
+    Plugins\FPSSystem\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSSystem\PerModuleInline.gen.cpp
+Plugins\FPSSystem\Source\FPSSystem\
+    Plugins\FPSSystem\Source\FPSSystem.Build.cs
+    Plugins\FPSSystem\Source\FPSSystem\BaseSystem.cpp
+    Plugins\FPSSystem\Source\FPSSystem\BaseSystem.h
+    Plugins\FPSSystem\Source\FPSSystem\FPSSystem.cpp
+    Plugins\FPSSystem\Source\FPSSystem\FPSSystem.h
+Plugins\FPSUI\Binaries\
+Plugins\FPSUI\Intermediate\
+Plugins\FPSUI\Source\
+    Plugins\FPSUI\FPSUI.uplugin
+Plugins\FPSUI\Binaries\Win64\
+Plugins\FPSUI\Intermediate\Build\
+Plugins\FPSUI\Intermediate\Build\Win64\
+Plugins\FPSUI\Intermediate\Build\Win64\x64\
+Plugins\FPSUI\Intermediate\Build\Win64\x64\UnrealEditor\
+Plugins\FPSUI\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\
+Plugins\FPSUI\Intermediate\Build\Win64\x64\UnrealEditor\Development\
+Plugins\FPSUI\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSUI\
+    Plugins\FPSUI\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSUI\Definitions.FPSUI.h
+    Plugins\FPSUI\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSUI\Module.FPSUI.cpp
+    Plugins\FPSUI\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSUI\PerModuleInline.gen.cpp
+Plugins\FPSUI\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseUI\
+Plugins\FPSUI\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSUI\
+    Plugins\FPSUI\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseUI\Definitions.BaseUI.h
+    Plugins\FPSUI\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseUI\Module.BaseUI.cpp
+    Plugins\FPSUI\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseUI\PerModuleInline.gen.cpp
+    Plugins\FPSUI\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSUI\Definitions.FPSUI.h
+    Plugins\FPSUI\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSUI\Module.FPSUI.cpp
+    Plugins\FPSUI\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSUI\PerModuleInline.gen.cpp
+Plugins\FPSUI\Source\FPSUI\
+    Plugins\FPSUI\Source\FPSUI.Build.cs
+    Plugins\FPSUI\Source\FPSUI\BaseUI.cpp
+    Plugins\FPSUI\Source\FPSUI\BaseUI.h
+    Plugins\FPSUI\Source\FPSUI\FPSUI.cpp
+    Plugins\FPSUI\Source\FPSUI\FPSUI.h
+Plugins\FPSUtility\Binaries\
+Plugins\FPSUtility\Intermediate\
+Plugins\FPSUtility\Source\
+    Plugins\FPSUtility\FPSUtility.uplugin
+Plugins\FPSUtility\Binaries\Win64\
+Plugins\FPSUtility\Intermediate\Build\
+Plugins\FPSUtility\Intermediate\Build\Win64\
+Plugins\FPSUtility\Intermediate\Build\Win64\x64\
+Plugins\FPSUtility\Intermediate\Build\Win64\x64\UnrealEditor\
+Plugins\FPSUtility\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\
+Plugins\FPSUtility\Intermediate\Build\Win64\x64\UnrealEditor\Development\
+Plugins\FPSUtility\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSUtility\
+    Plugins\FPSUtility\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSUtility\Definitions.FPSUtility.h
+    Plugins\FPSUtility\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSUtility\Module.FPSUtility.cpp
+    Plugins\FPSUtility\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSUtility\PerModuleInline.gen.cpp
+Plugins\FPSUtility\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseUtility\
+Plugins\FPSUtility\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSUtility\
+    Plugins\FPSUtility\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseUtility\Definitions.BaseUtility.h
+    Plugins\FPSUtility\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseUtility\Module.BaseUtility.cpp
+    Plugins\FPSUtility\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseUtility\PerModuleInline.gen.cpp
+    Plugins\FPSUtility\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSUtility\Definitions.FPSUtility.h
+    Plugins\FPSUtility\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSUtility\Module.FPSUtility.cpp
+    Plugins\FPSUtility\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSUtility\PerModuleInline.gen.cpp
+Plugins\FPSUtility\Source\FPSUtility\
+    Plugins\FPSUtility\Source\FPSUtility.Build.cs
+    Plugins\FPSUtility\Source\FPSUtility\BaseUtility.cpp
+    Plugins\FPSUtility\Source\FPSUtility\BaseUtility.h
+    Plugins\FPSUtility\Source\FPSUtility\FPSUtility.cpp
+    Plugins\FPSUtility\Source\FPSUtility\FPSUtility.h
+Plugins\FPSWeapon\Binaries\
+Plugins\FPSWeapon\Intermediate\
+Plugins\FPSWeapon\Source\
+    Plugins\FPSWeapon\FPSWeapon.uplugin
+Plugins\FPSWeapon\Binaries\Win64\
+Plugins\FPSWeapon\Intermediate\Build\
+Plugins\FPSWeapon\Intermediate\Build\Win64\
+Plugins\FPSWeapon\Intermediate\Build\Win64\x64\
+Plugins\FPSWeapon\Intermediate\Build\Win64\x64\UnrealEditor\
+Plugins\FPSWeapon\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\
+Plugins\FPSWeapon\Intermediate\Build\Win64\x64\UnrealEditor\Development\
+Plugins\FPSWeapon\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSWeapon\
+    Plugins\FPSWeapon\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSWeapon\Definitions.FPSWeapon.h
+    Plugins\FPSWeapon\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSWeapon\Module.FPSWeapon.cpp
+    Plugins\FPSWeapon\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSWeapon\PerModuleInline.gen.cpp
+Plugins\FPSWeapon\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseWeapon\
+Plugins\FPSWeapon\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSWeapon\
+    Plugins\FPSWeapon\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseWeapon\Definitions.BaseWeapon.h
+    Plugins\FPSWeapon\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseWeapon\Module.BaseWeapon.cpp
+    Plugins\FPSWeapon\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseWeapon\PerModuleInline.gen.cpp
+    Plugins\FPSWeapon\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSWeapon\Definitions.FPSWeapon.h
+    Plugins\FPSWeapon\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSWeapon\Module.FPSWeapon.cpp
+    Plugins\FPSWeapon\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSWeapon\PerModuleInline.gen.cpp
+Plugins\FPSWeapon\Source\FPSWeapon\
+    Plugins\FPSWeapon\Source\FPSWeapon.Build.cs
+    Plugins\FPSWeapon\Source\FPSWeapon\BaseWeapon.cpp
+    Plugins\FPSWeapon\Source\FPSWeapon\BaseWeapon.h
+    Plugins\FPSWeapon\Source\FPSWeapon\FPSWeapon.cpp
+    Plugins\FPSWeapon\Source\FPSWeapon\FPSWeapon.h
+Plugins\FPSWorld\Binaries\
+Plugins\FPSWorld\Intermediate\
+Plugins\FPSWorld\Source\
+    Plugins\FPSWorld\FPSWorld.uplugin
+Plugins\FPSWorld\Binaries\Win64\
+Plugins\FPSWorld\Intermediate\Build\
+Plugins\FPSWorld\Intermediate\Build\Win64\
+Plugins\FPSWorld\Intermediate\Build\Win64\x64\
+Plugins\FPSWorld\Intermediate\Build\Win64\x64\UnrealEditor\
+Plugins\FPSWorld\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\
+Plugins\FPSWorld\Intermediate\Build\Win64\x64\UnrealEditor\Development\
+Plugins\FPSWorld\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSWorld\
+    Plugins\FPSWorld\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSWorld\Definitions.FPSWorld.h
+    Plugins\FPSWorld\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSWorld\Module.FPSWorld.cpp
+    Plugins\FPSWorld\Intermediate\Build\Win64\x64\UnrealEditor\DebugGame\FPSWorld\PerModuleInline.gen.cpp
+Plugins\FPSWorld\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseWorld\
+Plugins\FPSWorld\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSWorld\
+    Plugins\FPSWorld\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseWorld\Definitions.BaseWorld.h
+    Plugins\FPSWorld\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseWorld\Module.BaseWorld.cpp
+    Plugins\FPSWorld\Intermediate\Build\Win64\x64\UnrealEditor\Development\BaseWorld\PerModuleInline.gen.cpp
+    Plugins\FPSWorld\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSWorld\Definitions.FPSWorld.h
+    Plugins\FPSWorld\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSWorld\Module.FPSWorld.cpp
+    Plugins\FPSWorld\Intermediate\Build\Win64\x64\UnrealEditor\Development\FPSWorld\PerModuleInline.gen.cpp
+Plugins\FPSWorld\Source\FPSWorld\
+    Plugins\FPSWorld\Source\FPSWorld.Build.cs
+    Plugins\FPSWorld\Source\FPSWorld\BaseWorld.cpp
+    Plugins\FPSWorld\Source\FPSWorld\BaseWorld.h
+    Plugins\FPSWorld\Source\FPSWorld\FPSWorld.cpp
+    Plugins\FPSWorld\Source\FPSWorld\FPSWorld.h
