@@ -1,0 +1,15 @@
+{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "1.0",
+  "FriendlyName": "FPS UI Plugin",
+  "Description": "FPSActionGame Project's UI Plugin.",
+  "Category": "Gameplay",
+  "Modules": [
+    {
+      "Name": "FPSUI",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    }
+  ]
+}

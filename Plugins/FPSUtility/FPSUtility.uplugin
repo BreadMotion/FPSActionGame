@@ -1,0 +1,15 @@
+{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "1.0",
+  "FriendlyName": "FPS Utility Plugin",
+  "Description": "FPSActionGame Project's Utility Plugin.",
+  "Category": "Gameplay",
+  "Modules": [
+    {
+      "Name": "FPSUtility",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    }
+  ]
+}
