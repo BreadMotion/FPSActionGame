@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include "CoreMinimal.h"
+#include "FPSSystem/BaseSystem.h"
 #include "Subsystems/GameInstanceSubsystem.h"
 #include "SaveManager.h"
 #include "SaveSystem.generated.h"
