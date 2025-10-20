@@ -1,6 +1,6 @@
 #include "BaseGameMode.h"
 #include "BaseGameState.h"
-#include "BaseGameManager.h"
+#include "FPSSystem/BaseSystem.h"
 #include "Engine/World.h"
 #include "GameFramework/PlayerController.h"
 #include "Kismet/GameplayStatics.h"
@@ -20,7 +20,7 @@ ABaseGameMode::ABaseGameMode()
 /**
  * @brief ゲーム開始時の処理
  * @details
- * - 親クラスの StartPlay() を呼び出した後に、BaseGameManager の初期化を行います。
+ * - 親クラスの StartPlay() を呼び出した後に、
  * - 現在の GameState をキャッシュします。
  */
 void ABaseGameMode::StartPlay()
@@ -35,16 +35,20 @@ void ABaseGameMode::StartPlay()
 	UGameInstance* gi = world->GetGameInstance();
 	if (world && gi)
 	{
-		UBaseGameManager* gm = NewObject<UBaseGameManager>(gi);
-		if (gm)
+		const TArray<UGameInstanceSubsystem*> subsystems = gi->GetSubsystemArrayCopy<UGameInstanceSubsystem>();
+		for (UGameInstanceSubsystem* subsystem : subsystems)
 		{
-			//gm->RegisterSystems(gi);
-			//gm->InitializeAll();
-
-			UE_LOG(LogTemp, Log, TEXT("[BaseGameMode] BaseGameManager initialized."));
+			if (UBaseSystem* baseSystem = Cast<UBaseSystem>(subsystem))
+			{
+				baseSystem->PrintDebugMessage(TEXT("Registered in BaseGameManager"));
+			}
 		}
-		else
-			UE_LOG(LogTemp, Warning, TEXT("[BaseGameMode] Failed to create UBaseGameManager instance."));
+
+		UE_LOG(LogTemp, Warning, TEXT("[BaseGameMode] Success to GameInstance setup."));
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("[BaseGameMode] Failed to GameInstance setup."));
 	}
 }
 
