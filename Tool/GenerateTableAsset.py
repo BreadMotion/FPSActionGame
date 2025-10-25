@@ -2,38 +2,69 @@ import urllib.request
 import unreal
 
 # ===== 設定 =====
-CSV_URL = r"https://docs.google.com/spreadsheets/d/1YHssd98A2mBzEWdTSMbR_8xpO6EAnEMXHFCLLPs93_k/edit?usp=drive_link?output=csv"
-ROWSTRUCT_PATH = "/Script/FPSActionGame.WeaponTable" # ネイティブUSTRUCTのパス：/Script/<Module>.<Struct>
-ASSET_NAME = "DT_Weapons" # 生成/更新するDataTable名
-ASSET_FOLDER = "/Game/Data" # 保存フォルダ
+CSV_URL = r"https://docs.google.com/spreadsheets/d/1YHssd98A2mBzEWdTSMbR_8xpO6EAnEMXHFCLLPs93_k/export?format=csv"
+ROWSTRUCT_PATH = "/Script/FPSActionGame.WeaponTable"
+ASSET_NAME = "DT_Weapons"
+ASSET_FOLDER = "/Game/Data"
 
 
-# === CSV取得 ===
-with urllib.request.urlopen(CSV_URL) as resp:
-csv_str = resp.read().decode('utf-8-sig')
+def fetch_csv(url: str, skip_lines: list[int] = None) -> str:
+    """CSVを取得して指定行をスキップ"""
+    with urllib.request.urlopen(url) as resp:
+        csv_str = resp.read().decode('utf-8-sig')
+
+    if skip_lines:
+        lines = csv_str.splitlines()
+        for index in sorted(skip_lines, reverse=True):
+            if 0 <= index < len(lines):
+                del lines[index]
+        csv_str = "\n".join(lines)
+
+    return csv_str
 
 
-row_struct = unreal.find_object(None, ROWSTRUCT_PATH)
-if not row_struct:
-raise RuntimeError(f"RowStructが見つかりません: {ROWSTRUCT_PATH}")
+def get_row_struct(path: str):
+    """USTRUCTを取得"""
+    row_struct = unreal.find_object(None, path)
+    if not row_struct:
+        raise RuntimeError(f"RowStructが見つかりません: {path}")
+    return row_struct
 
 
-# 既存DTがなければ作成
-asset_tools = unreal.AssetToolsHelpers.get_asset_tools()
-asset = unreal.EditorAssetLibrary.load_asset(f"{ASSET_FOLDER}/{ASSET_NAME}")
-if not asset:
-factory = unreal.DataTableFactory()
-factory.row_struct = row_struct
-asset = asset_tools.create_asset(ASSET_NAME, ASSET_FOLDER, unreal.DataTable, factory)
-if not asset:
-raise RuntimeError("DataTable作成に失敗しました")
+def create_or_load_datatable(name: str, folder: str, row_struct) -> unreal.DataTable:
+    """DataTableを作成または読み込み"""
+    asset_tools = unreal.AssetToolsHelpers.get_asset_tools()
+    asset_path = f"{folder}/{name}"
+    asset = unreal.EditorAssetLibrary.load_asset(asset_path)
+
+    if not asset:
+        factory = unreal.DataTableFactory()
+        factory.struct = row_struct
+        asset = asset_tools.create_asset(name, folder, unreal.DataTable, factory)
+        if not asset:
+            raise RuntimeError(f"DataTable作成に失敗しました: {asset_path}")
+
+    return asset
 
 
-# CSVで埋める（既存は上書き）
-result = unreal.DataTableFunctionLibrary.fill_data_table_from_csv_string(asset, csv_str)
-if not result:
-raise RuntimeError("CSVの読み込みに失敗しました（型不整合・列名不一致など）")
+def fill_datatable_from_csv(asset: unreal.DataTable, csv_str: str):
+    """DataTableにCSVを読み込む"""
+    result = unreal.DataTableFunctionLibrary.fill_data_table_from_csv_string(asset, csv_str)
+    if not result:
+        raise RuntimeError("CSVの読み込みに失敗しました（型不整合・列名不一致など）")
+    unreal.EditorAssetLibrary.save_loaded_asset(asset)
 
 
-unreal.EditorAssetLibrary.save_loaded_asset(asset)
-print(f"[OK] Updated DataTable: {ASSET_FOLDER}/{ASSET_NAME}")
+def main():
+    csv_str = fetch_csv(CSV_URL, skip_lines=[1, 2])  # 2,3行目を削除
+    unreal.log(f"CSV取得成功:\n{csv_str}")
+
+    row_struct = get_row_struct(ROWSTRUCT_PATH)
+    datatable = create_or_load_datatable(ASSET_NAME, ASSET_FOLDER, row_struct)
+    fill_datatable_from_csv(datatable, csv_str)
+
+    unreal.log(f"[OK] Updated DataTable: {ASSET_FOLDER}/{ASSET_NAME}")
+
+
+if __name__ == "__main__":
+    main()
