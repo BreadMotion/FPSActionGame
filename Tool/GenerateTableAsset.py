@@ -1,16 +1,18 @@
 import urllib.request
+import sys
 import unreal
 
 # ===== 設定 =====
-CSV_URL = r"https://docs.google.com/spreadsheets/d/1YHssd98A2mBzEWdTSMbR_8xpO6EAnEMXHFCLLPs93_k/export?format=csv"
-ROWSTRUCT_PATH = "/Script/FPSActionGame.WeaponTable"
-ASSET_NAME = "DT_Weapons"
+# CSV_URL = r"https://docs.google.com/spreadsheets/d/1YHssd98A2mBzEWdTSMbR_8xpO6EAnEMXHFCLLPs93_k/export?format=csv"
+ROWSTRUCT_PATH = "/Script/FPSActionGame."
 ASSET_FOLDER = "/Game/Data"
 
 
 def fetch_csv(url: str, skip_lines: list[int] = None) -> str:
+    """ "/edit?" 以降を探して置換"""
+    url_edit = url.replace("/edit?usp=sharing", "/export?format=csv")
     """CSVを取得して指定行をスキップ"""
-    with urllib.request.urlopen(url) as resp:
+    with urllib.request.urlopen(url_edit) as resp:
         csv_str = resp.read().decode('utf-8-sig')
 
     if skip_lines:
@@ -56,14 +58,14 @@ def fill_datatable_from_csv(asset: unreal.DataTable, csv_str: str):
 
 
 def main():
-    csv_str = fetch_csv(CSV_URL, skip_lines=[1, 2])  # 2,3行目を削除
+    csv_str = fetch_csv(sys.argv[1], skip_lines=[1, 2])  # 2,3行目を削除
     unreal.log(f"CSV取得成功:\n{csv_str}")
 
-    row_struct = get_row_struct(ROWSTRUCT_PATH)
-    datatable = create_or_load_datatable(ASSET_NAME, ASSET_FOLDER, row_struct)
+    row_struct = get_row_struct(ROWSTRUCT_PATH + sys.argv[2])
+    datatable = create_or_load_datatable(sys.argv[3], ASSET_FOLDER, row_struct)
     fill_datatable_from_csv(datatable, csv_str)
 
-    unreal.log(f"[OK] Updated DataTable: {ASSET_FOLDER}/{ASSET_NAME}")
+    unreal.log(f"[OK] Updated DataTable: {ASSET_FOLDER}/{sys.argv[3]}")
 
 
 if __name__ == "__main__":
