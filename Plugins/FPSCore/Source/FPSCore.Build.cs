@@ -14,7 +14,8 @@ public class FPSCore : ModuleRules
                 "Engine",
                 "InputCore",
                 "GameplayTasks",
-                "FPSSystem"
+                "FPSSystem",
+                //"EnhancedInput"
             }
         );
 

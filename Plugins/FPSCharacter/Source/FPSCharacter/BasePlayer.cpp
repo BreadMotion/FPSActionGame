@@ -30,6 +30,9 @@ void ABasePlayer::BeginPlay()
 
 void ABasePlayer::SetupPlayerInputComponent(UInputComponent* ic) {
 	Super::SetupPlayerInputComponent(ic);
+
+	// 自前型を用意しているならキャストして処理を追加してもよい
+
 	ic->BindAxis("MoveForward", this, &ABasePlayer::MoveForward);
 	ic->BindAxis("MoveRight", this, &ABasePlayer::MoveRight);
 	ic->BindAxis("Turn", this, &ABasePlayer::LookYaw);

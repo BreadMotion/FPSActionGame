@@ -1,5 +1,9 @@
 ﻿#pragma once
 #include "CoreMinimal.h"
+#include "GameFramework/PlayerController.h"
+#include "BasePlayerController.generated.h"
+
+class UBasePlayerInputComponent;
 
 /**
  * @class FBasePlayerController
@@ -7,9 +11,18 @@
  * @details
  *  - プレイヤーの入力処理や視点制御などを担当します。
  */
-class FPSCORE_API FBasePlayerController
+UCLASS()
+class FPSCORE_API ABasePlayerController : public APlayerController
 {
+	GENERATED_BODY()
 public:
-	FBasePlayerController();
-	~FBasePlayerController();
+	ABasePlayerController(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get());
+	~ABasePlayerController();
+
+protected:
+	/**
+	* @brief 入力コンポーネントの初期化
+	* @details ここで UBasePlayerInputComponent を生成し push する
+	*/
+	virtual void SetupInputComponent() override;
 };

@@ -3,7 +3,9 @@
 #include "FPSCharacter/BasePlayer.h"
 #include "UObject/ConstructorHelpers.h"
 
-ATestGameMode::ATestGameMode() {
+ATestGameMode::ATestGameMode()
+	: Super() 
+{
 	static ConstructorHelpers::FClassFinder<APawn> PlayerBPClass(
 		TEXT("/Character/Player/BP_Player")
 	);
