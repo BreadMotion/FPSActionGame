@@ -47,9 +47,7 @@ void ABaseGameMode::StartPlay()
 		UE_LOG(LogTemp, Warning, TEXT("[BaseGameMode] Success to GameInstance setup."));
 	}
 	else
-	{
 		UE_LOG(LogTemp, Warning, TEXT("[BaseGameMode] Failed to GameInstance setup."));
-	}
 }
 
 /**

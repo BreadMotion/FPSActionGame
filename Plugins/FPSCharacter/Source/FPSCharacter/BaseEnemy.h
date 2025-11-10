@@ -16,4 +16,15 @@ class FPSCHARACTER_API ABaseEnemy : public ABaseCharacter
 public:
 	ABaseEnemy();
 	~ABaseEnemy();
+
+protected:
+	virtual void BeginPlay() override;
+	virtual void TakeDamage(int amount) override;
+	virtual void Die() override;
+
+protected:
+	void MoveForward(float v);
+	void MoveRight(float v);
+	void LookYaw(float v);
+	void LookPitch(float v);
 };
