@@ -2,6 +2,7 @@
 #include "BaseGameState.h"
 #include "FPSSystem/BaseSystem.h"
 #include "Engine/World.h"
+#include "GameFramework/Character.h"
 #include "GameFramework/PlayerController.h"
 #include "Kismet/GameplayStatics.h"
 
@@ -12,8 +13,12 @@
  */
 ABaseGameMode::ABaseGameMode()
 {
-	// BaseGameState を使用（継承先で差し替え可能）
-	GameStateClass = ABaseGameState::StaticClass();
+	SetupGameStateClass();
+	SetupDefaultPawnClass();
+	SetupDefaultPlayerControllerClass();
+	SetupDefaultPlayerStateClass();
+	SetupDefaultSpectatorPawnClass();
+	SetupDefaultHUDClass();
 	UE_LOG(LogTemp, Log, TEXT("[BaseGameMode] Constructed (%s)"), *GetName());
 }
 
@@ -82,4 +87,38 @@ void ABaseGameMode::Logout(AController* _exiting)
 	UE_LOG(LogTemp, Log, TEXT("[BaseGameMode] Player exited: %s"), *_exiting->GetName());
 
 	// 必要に応じて GameManager にも通知可能
+}
+
+void ABaseGameMode::SetupGameStateClass()
+{	
+	GameStateClass = ABaseGameState::StaticClass();
+}
+
+void ABaseGameMode::SetupDefaultPawnClass()
+{
+	static ConstructorHelpers::FClassFinder<APawn> PlayerBPClass(
+		TEXT("/Character/Player/BP_Player")
+	);
+	if (PlayerBPClass.Succeeded()) DefaultPawnClass = PlayerBPClass.Class;
+	else DefaultPawnClass = ACharacter::StaticClass();
+}
+
+void ABaseGameMode::SetupDefaultPlayerControllerClass()
+{
+	//PlayerControllerClass = ;
+}
+
+void ABaseGameMode::SetupDefaultPlayerStateClass() 
+{
+	//PlayerStateClass = ;
+}
+
+void ABaseGameMode::SetupDefaultSpectatorPawnClass() 
+{
+	//SpectatorClass = ;
+}
+
+void ABaseGameMode::SetupDefaultHUDClass() 
+{
+	//HUDClass = ;
 }

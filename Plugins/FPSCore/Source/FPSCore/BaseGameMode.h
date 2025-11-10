@@ -52,6 +52,14 @@ public:
 	virtual void Logout(AController* _exiting) override;
 
 protected:
+	virtual void SetupGameStateClass();
+	virtual void SetupDefaultPawnClass();
+	virtual void SetupDefaultPlayerControllerClass();
+	virtual void SetupDefaultPlayerStateClass();
+	virtual void SetupDefaultSpectatorPawnClass();
+	virtual void SetupDefaultHUDClass();
+
+protected:
 	/** @brief キャッシュされたゲームステートの参照 */
 	UPROPERTY()
 	class ABaseGameState* m_cachedGameState;
